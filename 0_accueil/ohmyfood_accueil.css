@@ -1,0 +1,32 @@
+/*Version mobile -768px */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0px;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+  }
+  header img {
+    border: 20px solid white;
+    width: 40%;
+    height: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 2% 30% 2% 25%;
+    box-shadow: 2px 2px 5px #c4c4c4;
+  }
+  header #map {
+    display: flex;
+    align-items: center;
+    padding: 2% 40% 2% 30%;
+  }
+  header #map p {
+    margin-left: 3%;
+  }
+}
+/*Version tablette 768px / 992px*/
+/*Version Ordinateur +992px*//*# sourceMappingURL=ohmyfood_accueil.css.map */
