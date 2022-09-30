@@ -1,0 +1,21 @@
+/*Version mobile -768px */
+/* color / body / img / text */
+@media screen and (max-width: 768px) {
+  body {
+    font-family: "Roboto", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+  }
+  main img {
+    width: 40%;
+    height: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  a {
+    text-decoration: none;
+  }
+}/*# sourceMappingURL=ohmyfood_francaise.css.map */
