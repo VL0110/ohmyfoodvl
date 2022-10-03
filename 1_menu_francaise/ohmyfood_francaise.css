@@ -9,34 +9,23 @@
     width: 100%;
     margin: 0px;
   }
-  header img {
-    width: 100%;
-    height: 90%;
-    margin-left: -25px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   a {
     text-decoration: none;
   }
   /* header / main / footer */
-  header {
-    position: relative;
-    background-color: #F7F7F7;
-  }
   header #logo_ohmyfood {
     border: 20px solid white;
     background-color: white;
     display: flex;
-    width: 32%;
+    width: 28%;
     padding: 0% 63% 0% 5%;
     margin-left: -5%;
     box-shadow: 2px 2px 5px #c4c4c4;
   }
   header #logo_ohmyfood img {
-    width: 100%;
+    width: 110%;
     height: 90%;
-    padding-left: 40%;
+    padding-left: 30%;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -48,215 +37,180 @@
     padding-top: 3px;
   }
   header #img_francaise img {
-    width: 105%;
-  }
-  header #francaise {
-    display: flex;
     width: 100%;
-    height: 40%;
+  }
+  main {
+    background-color: #F6F6F6;
+  }
+  main #francaise {
+    display: flex;
+    width: 98%;
     border: 5px solid #F6F6F6;
     background-color: #F6F6F6;
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
-    position: relative;
-    top: -92px;
   }
-  header #francaise h1 {
+  main #francaise h1 {
     text-align: center;
     margin-left: 15%;
   }
-  header #francaise i {
-    padding-left: 25%;
-    padding-top: 5%;
+  main #francaise i {
+    font-size: 130%;
+    padding-left: 18%;
+    padding-top: 6%;
   }
-  .main-starter {
-    width: 90%;
-    height: 400px;
-    margin-left: 5%;
+  main .main-starter {
+    width: 100%;
     background-color: #F6F6F6;
   }
-  .main-starter h2 {
+  main .main-starter h2 {
     padding-top: 5%;
     padding-left: 11%;
   }
-  .main-starter .main-starter_choice {
+  main .main-starter .main-starter_choice {
     display: flex;
     align-items: center;
     text-decoration: none;
     border: 5px solid white;
     background-color: white;
     border-radius: 30px;
-    margin-left: 8%;
-    margin-right: 10%;
+    margin-left: 2%;
+    margin-right: 3%;
     margin-bottom: 20px;
     box-shadow: 2px 2px 5px #c4c4c4;
   }
-  .main-starter .main-starter_choice:hover {
+  main .main-starter .main-starter_choice:hover {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
-  .main-starter .main-starter_choice h3 {
+  main .main-starter .main-starter_choice h3 {
     color: black;
     margin-left: 6%;
   }
-  .main-starter .main-starter_choice p {
+  main .main-starter .main-starter_choice p {
     color: black;
     border-radius: 20px;
     margin-right: 8%;
     padding-left: 4px;
     padding-right: 4px;
   }
-  .main-starter .main-starter_choice h4 {
+  main .main-starter .main-starter_choice h4 {
     color: black;
   }
-  .main-dish {
+  main .main-dish {
     width: 90%;
     height: 450px;
     margin-left: 5%;
     background-color: #F6F6F6;
   }
-  .main-dish h2 {
+  main .main-dish h2 {
     padding-top: 5%;
     padding-left: 11%;
   }
-  .main-dish .main-dish_choice {
+  main .main-dish .main-dish_choice {
     display: flex;
     align-items: center;
     text-decoration: none;
     border: 5px solid white;
     background-color: white;
     border-radius: 30px;
-    margin-left: 8%;
-    margin-right: 10%;
+    margin-left: 2%;
+    margin-right: 3%;
     margin-bottom: 20px;
     box-shadow: 2px 2px 5px #c4c4c4;
   }
-  .main-dish .main-dish_choice:hover {
+  main .main-dish .main-dish_choice:hover {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
-  .main-dish .main-dish_choice h3 {
+  main .main-dish .main-dish_choice h3 {
     color: black;
     margin-left: 6%;
   }
-  .main-dish .main-dish_choice p {
+  main .main-dish .main-dish_choice p {
     color: black;
     border-radius: 20px;
     margin-right: 8%;
     padding-left: 4px;
     padding-right: 4px;
   }
-  .main-dish .main-dish_choice h4 {
+  main .main-dish .main-dish_choice h4 {
     color: black;
   }
-  .main-starter {
+  main .main-dessert {
     width: 90%;
-    height: 400px;
+    height: 450px;
     margin-left: 5%;
     background-color: #F6F6F6;
   }
-  .main-starter h2 {
+  main .main-dessert h2 {
     padding-top: 5%;
     padding-left: 11%;
   }
-  .main-starter .main-starter_choice {
+  main .main-dessert .main-dessert_choice {
     display: flex;
     align-items: center;
     text-decoration: none;
     border: 5px solid white;
     background-color: white;
     border-radius: 30px;
-    margin-left: 8%;
-    margin-right: 10%;
+    margin-left: 2%;
+    margin-right: 3%;
     margin-bottom: 20px;
     box-shadow: 2px 2px 5px #c4c4c4;
   }
-  .main-starter .main-starter_choice:hover {
+  main .main-dessert .main-dessert_choice:hover {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
-  .main-starter .main-starter_choice h3 {
+  main .main-dessert .main-dessert_choice h3 {
     color: black;
     margin-left: 6%;
   }
-  .main-starter .main-starter_choice p {
+  main .main-dessert .main-dessert_choice p {
     color: black;
     border-radius: 20px;
     margin-right: 8%;
     padding-left: 4px;
     padding-right: 4px;
   }
-  .main-starter .main-starter_choice h4 {
+  main .main-dessert .main-dessert_choice h4 {
     color: black;
   }
-  .main-dessert {
+  main .button {
     width: 90%;
-    height: 500px;
-    margin-left: 5%;
-    background-color: #F6F6F6;
+    height: 160px;
+    margin-top: 6%;
   }
-  .main-dessert h2 {
-    padding-top: 5%;
-    padding-left: 11%;
-  }
-  .main-dessert .main-dessert_choice {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    border: 5px solid white;
-    background-color: white;
-    border-radius: 30px;
-    margin-left: 8%;
-    margin-right: 10%;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 5px #c4c4c4;
-  }
-  .main-dessert .main-dessert_choice:hover {
-    border-color: #F5EDFF;
-    background-color: #F5EDFF;
-  }
-  .main-dessert .main-dessert_choice h3 {
-    color: black;
-    margin-left: 6%;
-  }
-  .main-dessert .main-dessert_choice p {
-    color: black;
-    border-radius: 20px;
-    margin-right: 8%;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  .main-dessert .main-dessert_choice h4 {
-    color: black;
-  }
-  .main-dessert .purple_button {
+  main .button .purple_button {
     text-align: center;
     color: white;
     border: 18px solid #FF79DA;
     border-radius: 30px;
     height: 30%;
-    width: 30%;
+    width: 40%;
     background-color: #FF79DA;
     box-shadow: 2px 2px 5px #c4c4c4;
-    margin-left: 150px;
+    margin-left: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
   footer {
-    width: 90%;
-    height: 350px;
+    width: 100%;
+    height: 300px;
     text-align: start;
     background-color: #353535;
-    margin-left: 5%;
   }
   footer .footer_block {
     display: flex;
     align-items: center;
-    margin-left: 3%;
+    margin-left: 5%;
     margin-bottom: -20px;
   }
   footer img {
     width: 40%;
     height: 90%;
-    padding: 3% 6% 3% 3%;
+    padding: 10% 6% 3% 5%;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -268,6 +222,6 @@
   footer h5 {
     font-size: 1em;
     color: white;
-    margin-left: 3%;
+    margin-left: 5%;
   }
 }/*# sourceMappingURL=ohmyfood_francaise.css.map */
