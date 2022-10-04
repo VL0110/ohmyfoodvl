@@ -3,6 +3,7 @@
 $primary: #9356DC;
 $secondary: #FF79DA ;
 $tertiary: #99E2D0;
+$degrade: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 $shadow: 2px 2px 5px #c4c4c4;
 
 body 
@@ -68,17 +69,24 @@ header
       p 
       {
         font-size: 1em;
-        margin-bottom: 40px;
+        margin-bottom: 55px;
       }
       .purple_button 
       {
         color: white;
-        border: 18px solid $secondary;
+        border: 0px solid ;
+        background: rgb(147,86,220);
         border-radius: 30px;
         height: 30%;
         width: 30%;
-        background-color: $secondary;
+        background: rgb(147,86,220);
+        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        padding: 20px 20px 20px 20px ;
         box-shadow: $shadow;
+        strong
+        {
+          font-size: 1em;
+        }
       }
       
 }
@@ -89,6 +97,7 @@ header
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
   background-color: white;
   margin-bottom: 5%;
       h2 
@@ -98,9 +107,10 @@ header
       }
       .main-block_operation
       {
-      width: 90%;
+        width: 70%;
+        min-width: 300px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items:center;
       text-decoration: none;
       border: 10px solid #F7F7F7;
@@ -117,21 +127,25 @@ header
       h4 
       {
           color: black;
-          margin-left: 6%;
+          margin-left: 20px;
       }
       p 
       {
+        position: absolute;
+        left: 35px;
         color: white;
-        border: 6px solid $primary;
-        background-color: $primary;
-        border-radius: 20px;
-        padding-left: 4px;
-        padding-right: 4px;
+        background: rgb(147,86,220);
+        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        padding: 10px 14px 10px 14px ;
+        border-radius: 30px;
+        margin-right: 20px;
+        box-shadow: $shadow;
       }
       i 
       {
         color: #7E7E7E;
         text-align: center;
+        margin-left: 50px;
         &:hover 
         {
           color: $primary;
@@ -183,7 +197,7 @@ header
     }
     h3
     {
-        margin: 5px 20px 0px 25px;
+        margin: 5px 25px 0px 25px;
     }
     p 
     {
@@ -318,17 +332,24 @@ header
       p 
       {
         font-size: 1em;
-        margin-bottom: 40px;
+        margin-bottom: 55px;
       }
       .purple_button 
       {
         color: white;
-        border: 18px solid $secondary;
+        border: 0px solid ;
+        background: rgb(147,86,220);
         border-radius: 30px;
         height: 30%;
         width: 30%;
-        background-color: $secondary;
+        background: rgb(147,86,220);
+        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        padding: 20px 20px 20px 20px ;
         box-shadow: $shadow;
+        strong
+        {
+          font-size: 1em;
+        }
       }
 }    
 
@@ -347,7 +368,8 @@ header
       }
       .main-block_operation
       {
-      width: 85%;
+      width: 70%;
+      min-width: 300px;
       display: flex;
       align-items: center;
       text-decoration: none;
@@ -367,22 +389,25 @@ header
       h4 
       {
           color: black;
-          margin-left: 6%;
+          margin-left: 20px;
       }
       p 
       {
+        position: absolute;
+        left: 35px;
         color: white;
-        border: 6px solid $primary;
-        background-color: $primary;
-        border-radius: 20px;
-        margin-right: 8%;
-        padding-left: 4px;
-        padding-right: 4px;
+        background: rgb(147,86,220);
+        background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+        padding: 10px 14px 10px 14px ;
+        border-radius: 30px;
+        margin-right: 20px;
+        box-shadow: $shadow;
       }
       i 
       {
         color: #7E7E7E;
         text-align: center;
+        margin-left: 50px;
         &:hover 
         {
           color: $primary;
@@ -441,7 +466,7 @@ header
     }
     i 
     {
-      font-size: 1.4em;
+      font-size: 1.6em;
       padding-left: 85%;
       margin-top: -53px;
       text-align: center;

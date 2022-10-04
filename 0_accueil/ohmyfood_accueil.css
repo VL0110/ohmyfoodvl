@@ -55,16 +55,22 @@ header h1 {
 }
 header p {
   font-size: 1em;
-  margin-bottom: 40px;
+  margin-bottom: 55px;
 }
 header .purple_button {
   color: white;
-  border: 18px solid #FF79DA;
+  border: 0px solid;
+  background: rgb(147, 86, 220);
   border-radius: 30px;
   height: 30%;
   width: 30%;
-  background-color: #FF79DA;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  padding: 20px 20px 20px 20px;
   box-shadow: 2px 2px 5px #c4c4c4;
+}
+header .purple_button strong {
+  font-size: 1em;
 }
 
 .main-block1 {
@@ -72,6 +78,7 @@ header .purple_button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  position: relative;
   background-color: white;
   margin-bottom: 5%;
 }
@@ -80,9 +87,10 @@ header .purple_button {
   padding-left: 5%;
 }
 .main-block1 .main-block_operation {
-  width: 90%;
+  width: 70%;
+  min-width: 300px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-decoration: none;
   border: 10px solid #F7F7F7;
@@ -98,19 +106,23 @@ header .purple_button {
 }
 .main-block1 .main-block_operation h4 {
   color: black;
-  margin-left: 6%;
+  margin-left: 20px;
 }
 .main-block1 .main-block_operation p {
+  position: absolute;
+  left: 35px;
   color: white;
-  border: 6px solid #9356DC;
-  background-color: #9356DC;
-  border-radius: 20px;
-  padding-left: 4px;
-  padding-right: 4px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  padding: 10px 14px 10px 14px;
+  border-radius: 30px;
+  margin-right: 20px;
+  box-shadow: 2px 2px 5px #c4c4c4;
 }
 .main-block1 .main-block_operation i {
   color: #7E7E7E;
   text-align: center;
+  margin-left: 50px;
 }
 .main-block1 .main-block_operation i:hover {
   color: #9356DC;
@@ -157,7 +169,7 @@ header .purple_button {
   border-top-right-radius: 30px;
 }
 .main-block2 .main-block_restaurant h3 {
-  margin: 5px 20px 0px 25px;
+  margin: 5px 25px 0px 25px;
 }
 .main-block2 .main-block_restaurant p {
   border-radius: 20px;
@@ -265,16 +277,22 @@ footer h5 {
   }
   header p {
     font-size: 1em;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
   }
   header .purple_button {
     color: white;
-    border: 18px solid #FF79DA;
+    border: 0px solid;
+    background: rgb(147, 86, 220);
     border-radius: 30px;
     height: 30%;
     width: 30%;
-    background-color: #FF79DA;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    padding: 20px 20px 20px 20px;
     box-shadow: 2px 2px 5px #c4c4c4;
+  }
+  header .purple_button strong {
+    font-size: 1em;
   }
   .main-block1 {
     display: flex;
@@ -289,7 +307,8 @@ footer h5 {
     margin-right: 0%;
   }
   .main-block1 .main-block_operation {
-    width: 85%;
+    width: 70%;
+    min-width: 300px;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -308,20 +327,23 @@ footer h5 {
   }
   .main-block1 .main-block_operation h4 {
     color: black;
-    margin-left: 6%;
+    margin-left: 20px;
   }
   .main-block1 .main-block_operation p {
+    position: absolute;
+    left: 35px;
     color: white;
-    border: 6px solid #9356DC;
-    background-color: #9356DC;
-    border-radius: 20px;
-    margin-right: 8%;
-    padding-left: 4px;
-    padding-right: 4px;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    padding: 10px 14px 10px 14px;
+    border-radius: 30px;
+    margin-right: 20px;
+    box-shadow: 2px 2px 5px #c4c4c4;
   }
   .main-block1 .main-block_operation i {
     color: #7E7E7E;
     text-align: center;
+    margin-left: 50px;
   }
   .main-block1 .main-block_operation i:hover {
     color: #9356DC;
@@ -372,7 +394,7 @@ footer h5 {
     margin-top: -1px;
   }
   .main-block2 .main-block_restaurant i {
-    font-size: 1.4em;
+    font-size: 1.6em;
     padding-left: 85%;
     margin-top: -53px;
     text-align: center;
