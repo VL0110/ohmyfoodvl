@@ -1,4 +1,5 @@
 /*Version Ordinateur +992px*/
+/*Version tablette 768px / 992px*/
 body {
   font-family: "Roboto", Arial, sans-serif;
   margin: 0px;
@@ -7,7 +8,7 @@ body {
 main {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 a {
@@ -74,17 +75,20 @@ header .purple_button strong {
 }
 
 .main-block1 {
-  width: 30%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   position: relative;
   background-color: white;
   margin-bottom: 5%;
+  margin-left: 20px;
+  margin-right: 150px;
 }
 .main-block1 h2 {
   padding-top: 5%;
-  padding-left: 5%;
+  padding-left: 3%;
+  padding-right: 70%;
 }
 .main-block1 .main-block_operation {
   width: 70%;
@@ -97,7 +101,7 @@ header .purple_button strong {
   background-color: #F7F7F7;
   border-radius: 30px;
   margin-bottom: 20px;
-  margin-left: 3%;
+  margin-left: 20px;
   box-shadow: 2px 2px 5px #c4c4c4;
 }
 .main-block1 .main-block_operation:hover {
@@ -110,7 +114,6 @@ header .purple_button strong {
 }
 .main-block1 .main-block_operation p {
   position: absolute;
-  left: 35px;
   color: white;
   background: rgb(147, 86, 220);
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
@@ -129,38 +132,36 @@ header .purple_button strong {
 }
 
 .main-block2 {
-  width: 70%;
-  height: 100%;
+  width: 90%;
+  height: 50%;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  border: 2px solid #F7F7F7;
   background-color: white;
 }
 .main-block2 h2 {
   padding-top: 2%;
   padding-left: 6%;
 }
-.main-block2 .main-block_restaurant {
-  width: 40%;
+
+.main-block_restaurant {
+  width: 50%;
   height: 260px;
   display: flex;
   flex-wrap: wrap;
   color: black;
   text-decoration: none;
-  border: 2px solid #F7F7F7;
-  background-color: #F7F7F7;
   border-radius: 30px;
   margin-left: 5%;
-  margin-right: 5%;
+  margin-right: 0%;
   margin-bottom: 25px;
   box-shadow: 2px 2px 5px #c4c4c4;
 }
-.main-block2 .main-block_restaurant:hover {
+.main-block_restaurant:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
 }
-.main-block2 .main-block_restaurant img {
+.main-block_restaurant img {
   width: 100%;
   height: 170px;
   -o-object-fit: cover;
@@ -168,15 +169,15 @@ header .purple_button strong {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 }
-.main-block2 .main-block_restaurant h3 {
+.main-block_restaurant h3 {
   margin: 5px 25px 0px 25px;
 }
-.main-block2 .main-block_restaurant p {
+.main-block_restaurant p {
   border-radius: 20px;
   margin: 25px 70px 5px 25px;
   margin-top: -1px;
 }
-.main-block2 .main-block_restaurant i {
+.main-block_restaurant i {
   font-size: 1.4em;
   padding-left: 85%;
   margin-top: -53px;
@@ -221,21 +222,12 @@ footer h5 {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    margin: 0px;
-  }
-  main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
   }
   main img {
     width: 40%;
     height: 90%;
     -o-object-fit: cover;
        object-fit: cover;
-  }
-  a {
-    text-decoration: none;
   }
   /* header / main / footer */
   header {
@@ -299,6 +291,7 @@ footer h5 {
     flex-direction: column;
     width: 90%;
     margin-left: 5%;
+    margin-right: 5%;
     background-color: white;
   }
   .main-block1 h2 {
@@ -349,7 +342,7 @@ footer h5 {
     color: #9356DC;
   }
   .main-block2 {
-    width: 90%;
+    width: 100%;
     height: 1300px;
     flex-direction: column;
     background-color: #F7F7F7;
@@ -360,7 +353,7 @@ footer h5 {
     padding-left: 11%;
   }
   .main-block2 .main-block_restaurant {
-    width: 80%;
+    width: 300px;
     height: 260px;
     display: flex;
     flex-wrap: wrap;
