@@ -1,5 +1,9 @@
 /*Version Ordinateur +992px*/
 /* header / main / footer */
+h1 {
+  font-family: "Shrikhand", Arial, sans-serif;
+}
+
 body {
   font-family: "Roboto", Arial, sans-serif;
   display: flex;
@@ -19,10 +23,11 @@ header {
   height: auto;
   justify-content: center;
   background-color: white;
+  position: relative;
 }
 header #logo_ohmyfood {
   width: auto;
-  height: 10%;
+  height: 15%;
   border: 20px solid white;
   background-color: white;
   display: flex;
@@ -31,8 +36,9 @@ header #logo_ohmyfood {
   box-shadow: 2px 2px 5px #c4c4c4;
 }
 header #logo_ohmyfood img {
-  width: 30%;
-  height: 90%;
+  background-color: white;
+  width: 300px;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -41,35 +47,38 @@ header #logo_ohmyfood i {
   font-size: 1.4em;
   padding-right: 20px;
   padding-left: 0px;
-  padding-top: 10px;
+  padding-top: 13px;
   position: absolute;
   left: 20px;
 }
 header #img_gout {
-  margin-top: 1px;
+  margin-top: 2px;
 }
 header #img_gout img {
   width: 100%;
-  height: 400px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 header #gout {
+  width: 96%;
   display: flex;
   justify-content: center;
   border: 20px solid #F6F6F6;
   background-color: #F6F6F6;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
+  position: absolute;
+  top: 480px;
 }
 header #gout h1 {
-  text-align: center;
-  margin-left: 15%;
+  font-size: 3em;
+  text-align: start;
 }
 header #gout i {
-  font-size: 1.4em;
+  font-size: 2.5em;
   padding-left: 18%;
-  padding-top: 3%;
+  padding-top: 45px;
 }
 
 main {
@@ -77,6 +86,7 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #F6F6F6;
+  padding-top: 50px;
 }
 
 .main-starter {
@@ -217,36 +227,42 @@ main {
 
 footer {
   width: 100%;
-  height: 400px;
+  height: 220px;
   text-align: start;
+  border: 30px solid #353535;
   background-color: #353535;
+  padding-left: 40px;
 }
 footer .footer_block {
   display: flex;
   align-items: center;
-  margin-left: 5%;
-  margin-bottom: -5px;
+  margin-left: 0px;
+  margin-bottom: -15px;
 }
 footer img {
-  padding: 5% 6% 3% 5%;
+  width: 300px;
+  padding: 10px 0px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 footer h4 {
   font-size: 1em;
   color: white;
-  margin-left: 3%;
+  margin-left: 15px;
 }
 footer h5 {
   font-size: 1em;
   color: white;
-  margin-left: 5%;
+  margin-left: 0px;
 }
 
 /*Version tablette 768px / 992px*/
 /*Version mobile -768px */
 /* color / body / img / text */
 @media screen and (max-width: 768px) {
+  h1 {
+    font-family: "Shrikhand", Arial, sans-serif;
+  }
   body {
     font-family: "Roboto", Arial, sans-serif;
     display: flex;
@@ -267,7 +283,7 @@ footer h5 {
   }
   header #logo_ohmyfood {
     width: auto;
-    height: 10%;
+    height: 15%;
     border: 20px solid white;
     background-color: white;
     display: flex;
@@ -276,8 +292,9 @@ footer h5 {
     box-shadow: 2px 2px 5px #c4c4c4;
   }
   header #logo_ohmyfood img {
-    width: 30%;
-    height: 90%;
+    background-color: white;
+    width: 300px;
+    height: 50px;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -286,7 +303,7 @@ footer h5 {
     font-size: 1.4em;
     padding-right: 20px;
     padding-left: 0px;
-    padding-top: 10px;
+    padding-top: 13px;
     position: absolute;
     left: 20px;
   }
@@ -301,39 +318,47 @@ footer h5 {
   }
   header #gout {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     border: 20px solid #F6F6F6;
     background-color: #F6F6F6;
     border-top-left-radius: 45px;
     border-top-right-radius: 45px;
   }
   header #gout h1 {
-    text-align: center;
+    font-size: 2.5em;
+    text-align: start;
     margin-left: 15%;
   }
   header #gout i {
-    font-size: 1.4em;
+    font-size: 2em;
     padding-left: 18%;
-    padding-top: 3%;
+    padding-top: 40px;
   }
   main {
+    flex-direction: column;
     background-color: #F6F6F6;
   }
   main .main-starter {
     width: 100%;
     background-color: #F6F6F6;
+    padding-top: 50px;
   }
   main .main-starter h2 {
+    font-size: 1.2em;
+    text-align: start;
     padding-top: 5%;
-    padding-left: 11%;
+    padding-left: 5%;
+    font-weight: lighter;
   }
   main .main-starter .main-starter_choice {
     display: flex;
     align-items: center;
+    flex-direction: row;
     text-decoration: none;
+    position: relative;
     border: 5px solid white;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 20px;
     margin-left: 2%;
     margin-right: 3%;
     margin-bottom: 20px;
@@ -343,37 +368,46 @@ footer h5 {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
+  main .main-starter .main-starter_choice .main-starter_text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    text-align: start;
+  }
   main .main-starter .main-starter_choice h3 {
     color: black;
-    margin-left: 6%;
+    margin-bottom: 0%;
   }
   main .main-starter .main-starter_choice p {
     color: black;
-    border-radius: 20px;
-    margin-right: 8%;
-    padding-left: 4px;
-    padding-right: 4px;
+    margin-top: 2%;
   }
   main .main-starter .main-starter_choice h4 {
+    position: absolute;
+    left: 90%;
     color: black;
   }
   main .main-dish {
-    width: 90%;
-    height: 450px;
-    margin-left: 5%;
+    width: 100%;
     background-color: #F6F6F6;
+    padding-top: 50px;
   }
   main .main-dish h2 {
+    font-size: 1.2em;
+    text-align: start;
     padding-top: 5%;
-    padding-left: 11%;
+    padding-left: 5%;
+    font-weight: lighter;
   }
   main .main-dish .main-dish_choice {
     display: flex;
     align-items: center;
+    flex-direction: row;
     text-decoration: none;
+    position: relative;
     border: 5px solid white;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 20px;
     margin-left: 2%;
     margin-right: 3%;
     margin-bottom: 20px;
@@ -383,37 +417,47 @@ footer h5 {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
+  main .main-dish .main-dish_choice .main-dish_text {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
   main .main-dish .main-dish_choice h3 {
+    width: 350px;
     color: black;
-    margin-left: 6%;
+    margin-bottom: 0%;
   }
   main .main-dish .main-dish_choice p {
     color: black;
-    border-radius: 20px;
-    margin-right: 8%;
-    padding-left: 4px;
-    padding-right: 4px;
+    margin-top: 2%;
+    margin-left: 15px;
   }
   main .main-dish .main-dish_choice h4 {
+    position: absolute;
+    left: 90%;
     color: black;
   }
   main .main-dessert {
-    width: 90%;
-    height: 450px;
-    margin-left: 5%;
+    width: 100%;
     background-color: #F6F6F6;
+    padding-top: 50px;
   }
   main .main-dessert h2 {
+    font-size: 1.2em;
+    text-align: start;
     padding-top: 5%;
-    padding-left: 11%;
+    padding-left: 5%;
+    font-weight: lighter;
   }
   main .main-dessert .main-dessert_choice {
     display: flex;
     align-items: center;
+    flex-direction: row;
     text-decoration: none;
+    position: relative;
     border: 5px solid white;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 20px;
     margin-left: 2%;
     margin-right: 3%;
     margin-bottom: 20px;
@@ -423,63 +467,73 @@ footer h5 {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
+  main .main-dessert .main-dessert_choice .main-dessert_text {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
   main .main-dessert .main-dessert_choice h3 {
+    width: 330px;
     color: black;
-    margin-left: 6%;
+    margin-bottom: 0%;
   }
   main .main-dessert .main-dessert_choice p {
     color: black;
-    border-radius: 20px;
-    margin-right: 8%;
-    padding-left: 4px;
-    padding-right: 4px;
+    margin-top: 2%;
+    margin-left: 15px;
   }
   main .main-dessert .main-dessert_choice h4 {
+    position: absolute;
+    left: 90%;
     color: black;
   }
   main .button {
     width: 90%;
     height: 160px;
     margin-top: 6%;
+    margin-left: 10%;
   }
   main .button .purple_button {
     text-align: center;
     color: white;
-    border: 18px solid #FF79DA;
+    border: 0px solid;
+    background: rgb(147, 86, 220);
     border-radius: 30px;
     height: 30%;
-    width: 40%;
-    background-color: #FF79DA;
+    width: 30%;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    padding: 20px 70px 20px 70px;
     box-shadow: 2px 2px 5px #c4c4c4;
-    margin-left: 100px;
-    padding-left: 10%;
-    padding-right: 10%;
   }
   footer {
     width: 100%;
-    height: 400px;
+    height: 220px;
     text-align: start;
+    border: 30px solid #353535;
     background-color: #353535;
+    padding-left: 10px;
   }
   footer .footer_block {
     display: flex;
     align-items: center;
-    margin-left: 5%;
-    margin-bottom: -5px;
+    margin-left: 0px;
+    margin-bottom: -15px;
   }
   footer img {
-    padding: 5% 6% 3% 5%;
+    width: 300px;
+    padding: 10px 0px 0px 0px;
     -o-object-fit: cover;
        object-fit: cover;
   }
   footer h4 {
     font-size: 1em;
     color: white;
-    margin-left: 3%;
+    margin-left: 15px;
   }
   footer h5 {
     font-size: 1em;
     color: white;
-    margin-left: 5%;
+    margin-left: 0px;
   }
 }/*# sourceMappingURL=ohmyfood_gout.css.map */
