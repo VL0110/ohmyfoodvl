@@ -30,8 +30,8 @@ a {
 header {
   width: auto;
   height: 370px;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: start;
   background-color: #F7F7F7;
 }
 header #logo_ohmyfood {
@@ -39,6 +39,7 @@ header #logo_ohmyfood {
   border: 20px solid white;
   background-color: white;
   box-shadow: 2px 2px 5px #c4c4c4;
+  padding-left: 30px;
 }
 header #logo_ohmyfood img {
   background-color: white;
@@ -50,23 +51,27 @@ header #map {
   height: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 1px;
   background-color: #EDEDED;
 }
 header #map i {
   margin-right: 10px;
+  padding-left: 60px;
 }
 header #map p {
-  text-align: center;
-  margin: 0% 0% 0% 0%;
+  text-align: start;
+  margin: 0px 0px 0px 0px;
+  padding-left: 0px;
 }
 header h1 {
   font-size: 2em;
+  padding-left: 50px;
 }
 header p {
   font-size: 1em;
   margin-bottom: 55px;
+  padding-left: 50px;
 }
 header .purple_button {
   font-size: 1em;
@@ -80,6 +85,7 @@ header .purple_button {
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   padding: 20px 20px 20px 20px;
   box-shadow: 2px 2px 5px #c4c4c4;
+  margin-left: 50px;
 }
 
 .main-block1 {
@@ -115,6 +121,7 @@ header .purple_button {
 .main-block_operation:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
+  box-shadow: 2px 2px 5px #8e8d8d;
 }
 .main-block_operation h4 {
   color: black;
@@ -172,6 +179,7 @@ header .purple_button {
 .main-block_restaurant:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
+  box-shadow: 2px 2px 5px #8e8d8d;
 }
 .main-block_restaurant img {
   width: 100%;
@@ -190,6 +198,7 @@ header .purple_button {
   margin-top: -1px;
 }
 .main-block_restaurant i {
+  color: #353535;
   font-size: 1.4em;
   padding-left: 85%;
   margin-top: -53px;
@@ -232,7 +241,6 @@ footer h5 {
 /* color / body / img / text */
 @media screen and (max-width: 768px) {
   body {
-    font-family: "Roboto", Arial, sans-serif;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -245,112 +253,58 @@ footer h5 {
   }
   /* header / main / footer */
   header {
-    width: auto;
-    height: 370px;
     justify-content: center;
     text-align: center;
-    background-color: #F7F7F7;
   }
   header #logo_ohmyfood {
-    height: 15%;
-    border: 20px solid white;
-    background-color: white;
-    box-shadow: 2px 2px 5px #c4c4c4;
-  }
-  header #logo_ohmyfood img {
-    background-color: white;
-    height: 90%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    padding-left: 0px;
   }
   header #map {
-    height: 40px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #EDEDED;
   }
   header #map i {
     margin-right: 10px;
+    padding-left: 0px;
   }
   header #map p {
     text-align: center;
-    margin: 0% 0% 0% 0%;
   }
   header h1 {
     font-size: 1.8em;
+    padding-left: 0px;
   }
   header p {
     font-size: 1em;
-    margin-bottom: 55px;
+    padding-left: 0px;
   }
   header .purple_button {
-    font-size: 1em;
-    color: white;
-    border: 0px solid;
-    background: rgb(147, 86, 220);
-    border-radius: 30px;
-    height: 30%;
-    width: 30%;
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-    padding: 20px 20px 20px 20px;
-    box-shadow: 2px 2px 5px #c4c4c4;
+    margin-left: 0px;
   }
   .main-block1 {
+    width: 90%;
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 50px;
-    background-color: white;
   }
   .main-block1 h2 {
     padding-top: 5%;
     padding-left: 11%;
     margin-right: 0%;
   }
-  .main-block1 .main-block_operation {
-    width: 70%;
-    min-width: 300px;
+  .main-block_operation {
     display: flex;
     align-items: center;
-    text-decoration: none;
     position: relative;
     border: 5px solid #F7F7F7;
-    background-color: #F7F7F7;
-    border-radius: 30px;
     margin-left: 8%;
     margin-right: 10%;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 5px #c4c4c4;
   }
-  .main-block1 .main-block_operation:hover {
-    border-color: #F5EDFF;
-    background-color: #F5EDFF;
-  }
-  .main-block1 .main-block_operation h4 {
-    color: black;
-    margin-left: 20px;
-  }
-  .main-block1 .main-block_operation p {
+  .main-block_operation p {
     position: absolute;
     left: -17px;
-    color: white;
-    background: #9356DC;
-    padding: 10px 14px 10px 14px;
-    border-radius: 30px;
-    margin-right: 20px;
-    box-shadow: 2px 2px 5px #c4c4c4;
-  }
-  .main-block1 .main-block_operation i {
-    color: #7E7E7E;
-    text-align: center;
-    margin-left: 50px;
-  }
-  .main-block1 .main-block_operation i:hover {
-    color: #9356DC;
   }
   .main-block2 {
     width: 90%;
@@ -366,71 +320,25 @@ footer h5 {
   .main-block2 .main-block_restaurant {
     width: 80%;
     height: 260px;
-    display: flex;
-    flex-wrap: wrap;
-    color: black;
-    text-decoration: none;
     border: 2px solid white;
     background-color: white;
     border-radius: 30px;
     margin-left: 8%;
-    margin-bottom: 25px;
-    box-shadow: 2px 2px 5px #c4c4c4;
-  }
-  .main-block2 .main-block_restaurant:hover {
-    border-color: #F5EDFF;
-    background-color: #F5EDFF;
-  }
-  .main-block2 .main-block_restaurant img {
-    width: 100%;
-    height: 170px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
   }
   .main-block2 .main-block_restaurant h3 {
     margin: 5px 20px 0px 25px;
   }
   .main-block2 .main-block_restaurant p {
-    border-radius: 20px;
     margin: 25px 270px 5px 25px;
     margin-top: -1px;
   }
   .main-block2 .main-block_restaurant i {
     font-size: 1.6em;
-    padding-left: 85%;
-    margin-top: -53px;
-    text-align: center;
   }
   footer {
-    width: auto;
     height: 270px;
-    text-align: start;
     border: 30px solid #353535;
     background-color: #353535;
     padding-left: 10px;
-  }
-  footer .footer_block {
-    display: flex;
-    align-items: center;
-    margin-left: 0px;
-    margin-bottom: -15px;
-  }
-  footer img {
-    width: 300px;
-    padding: 10px 0px 0px 0px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  footer h4 {
-    font-size: 1em;
-    color: white;
-    margin-left: 15px;
-  }
-  footer h5 {
-    font-size: 1em;
-    color: white;
-    margin-left: 0px;
   }
 }/*# sourceMappingURL=ohmyfood_accueil.css.map */
