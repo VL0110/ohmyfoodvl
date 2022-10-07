@@ -22,20 +22,29 @@ a
 {
   text-decoration: none;
 }
+.loader {
+  position : fixed;
+  z-index: 9999;
+  background : url('icon-loader.gif') 50% 50% no-repeat;
+  top : 0px;
+  left : 0px;
+  height : 100%;
+  width : 100%;
+  cursor : wait;
+  }
 
 
 /* header / main / footer */
 
 header
 {
-    width: 100%;
+    width: auto;
     height: 370px;
     justify-content: center;
     text-align: center;
     background-color: #F7F7F7;
     #logo_ohmyfood 
     {
-      width: auto;
       height: 15%;
      border: 20px solid white;
      background-color: white;
@@ -100,7 +109,7 @@ header
   margin-right: 150px;
   h2 
   {
-    padding-top: 5%;
+    padding-top: 20px;
     padding-left: 50px;
     padding-right: 70%;
   }
@@ -136,8 +145,7 @@ header
         position: absolute;
         left: -25px;
         color: white;
-        background: rgb(147,86,220);
-        background: $degrade;
+        background: $primary;
         padding: 10px 14px 10px 14px ;
         border-radius: 30px;
         margin-right: 20px;
@@ -221,10 +229,10 @@ header
 
   footer 
   {
-     width: 100%;
-     height: 220px;
+     width: auto;
+     height: 280px;
      text-align: start;
-     border: 30px solid #353535;
+     border: 10px solid #353535;
      background-color: #353535;
      padding-left: 40px;
      .footer_block
@@ -391,8 +399,7 @@ header
         position: absolute;
         left: -17px;
         color: white;
-        background: rgb(147,86,220);
-        background: $degrade;
+        background: $primary;
         padding: 10px 14px 10px 14px ;
         border-radius: 30px;
         margin-right: 20px;
@@ -471,7 +478,7 @@ header
 
 footer 
 {
-   width: 100%;
+   width: auto;
    height: 300px;
    text-align: start;
    border: 30px solid #353535;

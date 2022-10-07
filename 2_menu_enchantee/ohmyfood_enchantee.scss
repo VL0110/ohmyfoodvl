@@ -31,7 +31,7 @@ a
 
 header
 {
-  width: 100%;
+  width: auto;
   height: auto;
   justify-content: center;
   background-color: white;
@@ -40,15 +40,14 @@ header
   {
     width: auto;
     height: 15%;
-    border: 20px solid white;
-    background-color: white;
+    border: 20px solid #F6F6F6;
+    background-color: #F6F6F6;
     display: flex;
     justify-content: center;
-    position: relative;
     box-shadow: $shadow;
     img
     {
-      background-color: white;
+      background-color: #F6F6F6;
       width: 300px;
       height: 50px;
       object-fit: cover;
@@ -70,21 +69,21 @@ header
     img 
     {
       width: 100%;
-      height: 500px;
+      height: 460px;
       object-fit: cover;
+      opacity: 0.7;
     }
   }
   #enchantee
   {
-    width: 96%;
+    width: 97%;
     display: flex;
     justify-content: center;
-    border: 20px solid #F6F6F6;
-    background-color: #F6F6F6;
-    border-top-left-radius: 45px;
-    border-top-right-radius: 45px;
-    position: absolute;
-    top: 480px;
+    border: 20px solid white;
+    background-color: white;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-left: 0%;
     h1
     {
       font-size: 3em;
@@ -92,8 +91,9 @@ header
     }
     i 
     {
+      color: #353535;
       font-size: 2.5em;
-      padding-left: 18%;
+      padding-left: 6%;
       padding-top: 45px;
     }
   }
@@ -103,16 +103,41 @@ main
 {
 display: flex;
 flex-direction: row;
+justify-content: center;
 flex-wrap: wrap;
-background-color: #F6F6F6;
-padding-top: 50px;
+background-color: white;
+padding-top: 10px;
+}
+h2 
+{
+font-size: 1.2em;
+text-align: center;
+padding-top: 5%;
+padding-left: 0%;
+font-weight: lighter;
+}
+h3
+{
+color: black;
+margin-bottom: 0%;
+}
+p 
+{
+color: black;
+margin-top: 3% ;
+}
+h4 
+{
+margin-top: 10px;
+padding-top: 0%;
+color: black;
 }
 .main-starter
 {
 text-align: center;
 justify-content: center;
 width: 30%;
-background-color: #F6F6F6;
+background-color: white;
 padding-left: 20px;
 }
   .main-starter_choice
@@ -122,9 +147,9 @@ padding-left: 20px;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  border: 5px solid white;
-  background-color: white;
-  border-radius: 30px;
+  border: 5px solid #F6F6F6;
+  background-color: #F6F6F6;
+  border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: $shadow;
   &:hover 
@@ -132,21 +157,11 @@ padding-left: 20px;
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
-  h3
+  .main-starter_text
   {
-      color: black;
-  }
-  p 
-  {
-    color: black;
-    border-radius: 20px;
-    margin-right: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  h4 
-  {
-    color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   }
   } 
 
@@ -156,10 +171,9 @@ padding-left: 20px;
 text-align: center;
 justify-content: center;
 width: 30%;
-background-color: #F6F6F6;
+background-color: white;
 padding-left: 20px;
 } 
-
   .main-dish_choice
   {
     width: 90%;
@@ -167,9 +181,9 @@ padding-left: 20px;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    border: 5px solid white;
-    background-color: white;
-    border-radius: 30px;
+    border: 5px solid #F6F6F6;
+    background-color: #F6F6F6;
+    border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: $shadow;
   &:hover 
@@ -177,22 +191,11 @@ padding-left: 20px;
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
-  h3
+  .main-dish_text
   {
-      color: black;
-      margin-left: 6%;
-  }
-  p 
-  {
-    color: black;
-    border-radius: 20px;
-    margin-right: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  h4 
-  {
-    color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   }
   } 
 
@@ -202,7 +205,7 @@ padding-left: 20px;
 text-align: center;
 justify-content: center;
 width: 30%;
-background-color: #F6F6F6;
+background-color: white;
 padding-left: 20px;
 } 
   .main-dessert_choice
@@ -212,9 +215,9 @@ padding-left: 20px;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    border: 5px solid white;
-    background-color: white;
-    border-radius: 30px;
+    border: 5px solid #F6F6F6;
+    background-color: #F6F6F6;
+    border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: $shadow;
   &:hover 
@@ -222,22 +225,11 @@ padding-left: 20px;
     border-color: #F5EDFF;
     background-color: #F5EDFF;
   }
-  h3
+  .main-dessert_text
   {
-      color: black;
-      margin-left: 6%;
-  }
-  p 
-  {
-    color: black;
-    border-radius: 20px;
-    margin-right: 0px;
-    padding-left: 4px;
-    padding-right: 4px;
-  }
-  h4 
-  {
-    color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   }
   } 
 
@@ -246,7 +238,7 @@ padding-left: 20px;
 text-align: center;
 height: 160px;
 margin-top: 6%;
-margin-left: 39%;
+margin-left: 0%;
 .purple_button 
 {
 text-align: center;
@@ -265,7 +257,7 @@ box-shadow: $shadow;
 
 footer 
 {
-width: 100%;
+  width: auto;
 height: 220px;
 text-align: start;
 border: 30px solid #353535;
@@ -334,7 +326,7 @@ margin-left: 0px;
 
   header
   {
-    width: 100%;
+    width: auto;
     height: auto;
     justify-content: center;
     background-color: white;;
@@ -372,7 +364,6 @@ margin-left: 0px;
       img 
       {
         width: 100%;
-        height: 400px;
         object-fit: cover;
       }
     }
@@ -404,11 +395,7 @@ main
 {
   flex-direction: column;
   background-color: #F6F6F6;
- .main-starter
-{
-  width: 100%;
-  background-color: #F6F6F6;
-  padding-top: 50px;
+  padding-top: 0px;
   h2 
   {
     font-size: 1.2em;
@@ -417,6 +404,27 @@ main
     padding-left: 5%;
     font-weight: lighter;
   }
+  h3
+  {
+      color: black;
+      margin-bottom: 0%;
+  }
+  p 
+  {
+    color: black;
+    margin-top: 2% ;
+  }
+  h4 
+  {
+    position: absolute;
+    left: 90%;
+    color: black;
+  }
+ .main-starter
+{
+  width: 100%;
+  background-color: #F6F6F6;
+  padding-top: 0px;
       .main-starter_choice
       {
       display: flex;
@@ -440,25 +448,8 @@ main
       {
       display: flex;
       flex-direction: column;
-      margin-left: 20px;
+      margin-left: 10px;
       text-align: start;
-      }
-      h3
-      {
-          color: black;
-          margin-bottom: 0%;
-      }
-      p 
-      {
-        color: black;
-        margin-top: 2% ;
-        padding-left: 0%;
-      }
-      h4 
-      {
-        position: absolute;
-        left: 90%;
-        color: black;
       }
       } 
  } 
@@ -467,15 +458,7 @@ main
 {
   width: 100%;
   background-color: #F6F6F6;
-  padding-top: 50px;
-  h2 
-  {
-    font-size: 1.2em;
-    text-align: start;
-    padding-top: 5%;
-    padding-left: 5%;
-    font-weight: lighter;
-  }
+  padding-top: 0px;
       .main-dish_choice
       {
       display: flex;
@@ -501,24 +484,6 @@ main
       flex-direction: column;
       text-align: start;
       }
-      h3
-      {
-        width: 350px;
-          color: black;
-          margin-bottom: 0%;
-      }
-      p 
-      {
-        color: black;
-        margin-top: 2% ;
-        margin-left: 15px;
-      }
-      h4 
-      {
-        position: absolute;
-        left: 90%;
-        color: black;
-      }
       } 
  } 
 
@@ -526,15 +491,7 @@ main
 {
   width: 100%;
   background-color: #F6F6F6;
-  padding-top: 50px;
-  h2 
-  {
-    font-size: 1.2em;
-    text-align: start;
-    padding-top: 5%;
-    padding-left: 5%;
-    font-weight: lighter;
-  }
+  padding-top: 0px;
       .main-dessert_choice
       {
       display: flex;
@@ -560,24 +517,6 @@ main
       flex-direction: column;;
       text-align: start;
       }
-      h3
-      {
-        width: 350px;
-          color: black;
-          margin-bottom: 0%;
-      }
-      p 
-      {
-        color: black;
-        margin-top: 2% ;
-        margin-left: 15px;
-      }
-      h4 
-      {
-        position: absolute;
-        left: 90%;
-        color: black;
-      }
       } 
  } 
  .button 
@@ -601,11 +540,11 @@ main
   box-shadow: $shadow;
  }
 } 
-}
+} 
 
 footer 
 {
-   width: 100%;
+  width: auto;
    height: 220px;
    text-align: start;
    border: 30px solid #353535;
