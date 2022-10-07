@@ -226,7 +226,7 @@ h4 {
 
 footer {
   width: auto;
-  height: 220px;
+  height: 270px;
   text-align: start;
   border: 30px solid #353535;
   background-color: #353535;
@@ -248,6 +248,7 @@ footer h4 {
   font-size: 1em;
   color: white;
   margin-left: 15px;
+  padding-top: 10px;
 }
 footer h5 {
   font-size: 1em;
