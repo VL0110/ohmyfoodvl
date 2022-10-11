@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: auto;
   margin: 0px;
 }
 
@@ -23,7 +23,6 @@ header {
   height: auto;
   justify-content: center;
   background-color: white;
-  position: relative;
 }
 header #logo_ohmyfood {
   width: auto;
@@ -50,6 +49,9 @@ header #logo_ohmyfood i {
   position: absolute;
   left: 20px;
 }
+header #logo_ohmyfood i:hover {
+  color: #9356DC;
+}
 header #img_enchantee {
   margin-top: 2px;
 }
@@ -60,7 +62,7 @@ header #img_enchantee img {
      object-fit: cover;
 }
 header #enchantee {
-  width: 97%;
+  width: auto;
   display: flex;
   justify-content: center;
   border: 20px solid white;
@@ -81,17 +83,16 @@ header #enchantee i {
 }
 
 main {
-  display: flex;
-  flex-direction: row;
+  width: auto;
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
   background-color: white;
   padding-top: 10px;
 }
 
 h2 {
   font-size: 1.2em;
-  text-align: center;
+  text-align: start;
   padding-top: 5%;
   padding-left: 0%;
   font-weight: lighter;
@@ -114,15 +115,14 @@ h4 {
 }
 
 .main-starter {
+  width: auto;
   text-align: center;
-  justify-content: center;
-  width: 30%;
   background-color: white;
-  padding-left: 20px;
+  margin-left: 10%;
 }
 
 .main-starter_choice {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,10 +132,13 @@ h4 {
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 2px 2px 5px #c4c4c4;
+  transform: scale(1);
+  transition: all 400ms;
 }
 .main-starter_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
+  transform: scale(1.05);
   box-shadow: 2px 2px 5px #8e8d8d;
 }
 .main-starter_choice .main-starter_text {
@@ -145,15 +148,14 @@ h4 {
 }
 
 .main-dish {
+  width: auto;
   text-align: center;
-  justify-content: center;
-  width: 30%;
   background-color: white;
-  padding-left: 20px;
+  margin-left: 10%;
 }
 
 .main-dish_choice {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,10 +165,13 @@ h4 {
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 2px 2px 5px #c4c4c4;
+  transform: scale(1);
+  transition: all 400ms;
 }
 .main-dish_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
+  transform: scale(1.05);
   box-shadow: 2px 2px 5px #8e8d8d;
 }
 .main-dish_choice .main-dish_text {
@@ -176,15 +181,14 @@ h4 {
 }
 
 .main-dessert {
+  width: auto;
   text-align: center;
-  justify-content: center;
-  width: 30%;
   background-color: white;
-  padding-left: 20px;
+  margin-left: 10%;
 }
 
 .main-dessert_choice {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,10 +198,13 @@ h4 {
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: 2px 2px 5px #c4c4c4;
+  transform: scale(1);
+  transition: all 400ms;
 }
 .main-dessert_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
+  transform: scale(1.05);
   box-shadow: 2px 2px 5px #8e8d8d;
 }
 .main-dessert_choice .main-dessert_text {
@@ -224,6 +231,13 @@ h4 {
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   padding: 20px 70px 20px 70px;
   box-shadow: 2px 2px 5px #c4c4c4;
+  margin-left: 50px;
+  transform: scale(1);
+  transition: all 400ms;
+}
+.button .purple_button:hover {
+  transform: scale(1.15);
+  box-shadow: 2px 2px 5px #8e8d8d;
 }
 
 footer {
@@ -232,7 +246,7 @@ footer {
   text-align: start;
   border: 30px solid #353535;
   background-color: #353535;
-  padding-left: 40px;
+  padding-left: 60px;
 }
 footer .footer_block {
   display: flex;

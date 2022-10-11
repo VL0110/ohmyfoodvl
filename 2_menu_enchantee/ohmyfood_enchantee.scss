@@ -19,7 +19,7 @@ body
       display: flex; 
       justify-content: center;
       flex-direction: column;
-      width: 100%;
+      width: auto;
       margin: 0px;
 }
 a
@@ -36,7 +36,6 @@ header
   height: auto;
   justify-content: center;
   background-color: white;
-  position: relative;
   #logo_ohmyfood 
   {
     width: auto;
@@ -62,6 +61,10 @@ header
       padding-top: 13px;
       position: absolute;
       left: 20px;
+      &:hover
+      {
+        color: $primary;
+      }
     }
   }
   #img_enchantee
@@ -76,7 +79,7 @@ header
   }
   #enchantee
   {
-    width: 97%;
+    width: auto;
     display: flex;
     justify-content: center;
     border: 20px solid white;
@@ -101,17 +104,16 @@ header
 
 main 
 {
-display: flex;
-flex-direction: row;
+width: auto;
+flex-direction: column;
 justify-content: center;
-flex-wrap: wrap;
 background-color: white;
 padding-top: 10px;
 }
 h2 
 {
 font-size: 1.2em;
-text-align: center;
+text-align: start;
 padding-top: 5%;
 padding-left: 0%;
 font-weight: lighter;
@@ -134,15 +136,14 @@ color: black;
 }
 .main-starter
 {
+width: auto;
 text-align: center;
-justify-content: center;
-width: 30%;
 background-color: white;
-padding-left: 20px;
+margin-left: 10%;
 }
   .main-starter_choice
   {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,10 +153,13 @@ padding-left: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: $shadow;
+  transform: scale(1);
+  transition: all 400ms;
   &:hover 
   {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
+    transform: scale(1.05);
     box-shadow: $shadowhover;
   }
   .main-starter_text
@@ -169,15 +173,14 @@ padding-left: 20px;
 
 .main-dish
 {
+width: auto;
 text-align: center;
-justify-content: center;
-width: 30%;
 background-color: white;
-padding-left: 20px;
+margin-left: 10%;
 } 
   .main-dish_choice
   {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -187,12 +190,15 @@ padding-left: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: $shadow;
-  &:hover 
-  {
-    border-color: #F5EDFF;
-    background-color: #F5EDFF;
-    box-shadow: $shadowhover;
-  }
+    transform: scale(1);
+    transition: all 400ms;
+    &:hover 
+    {
+      border-color: #F5EDFF;
+      background-color: #F5EDFF;
+      transform: scale(1.05);
+      box-shadow: $shadowhover;
+    }
   .main-dish_text
   {
   display: flex;
@@ -204,15 +210,14 @@ padding-left: 20px;
 
 .main-dessert
 {
+width: auto;
 text-align: center;
-justify-content: center;
-width: 30%;
 background-color: white;
-padding-left: 20px;
+margin-left: 10%;
 } 
   .main-dessert_choice
   {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -222,12 +227,15 @@ padding-left: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: $shadow;
-  &:hover 
-  {
-    border-color: #F5EDFF;
-    background-color: #F5EDFF;
-    box-shadow: $shadowhover;
-  }
+    transform: scale(1);
+    transition: all 400ms;
+    &:hover 
+    {
+      border-color: #F5EDFF;
+      background-color: #F5EDFF;
+      transform: scale(1.05);
+      box-shadow: $shadowhover;
+    }
   .main-dessert_text
   {
   display: flex;
@@ -255,17 +263,25 @@ background: rgb(147,86,220);
 background: $degrade;
 padding: 20px 70px 20px 70px ;
 box-shadow: $shadow;
+margin-left: 50px;
+transform: scale(1);
+transition: all 400ms;
+&:hover
+{
+  transform: scale(1.15);
+  box-shadow: $shadowhover;
+}
 }
 } 
 
 footer 
 {
-  width: auto;
-  height: 270px;
+width: auto;
+height: 270px;
 text-align: start;
 border: 30px solid #353535;
 background-color: #353535;
-padding-left: 40px;
+padding-left: 60px;
 .footer_block
 {
 display: flex;
