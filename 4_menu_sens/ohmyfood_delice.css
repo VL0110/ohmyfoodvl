@@ -91,12 +91,6 @@ main {
   background-color: #F6F6F6;
   padding-top: 0px;
 }
-main h2 {
-  font-size: 1.2em;
-  text-align: start;
-  padding-left: 0%;
-  font-weight: lighter;
-}
 main h3 {
   color: black;
   margin-bottom: 0%;
@@ -120,6 +114,20 @@ main h4 {
   background-color: #F6F6F6;
   margin-left: 10%;
   padding-bottom: 3%;
+}
+
+h2 {
+  font-size: 1em;
+  text-align: start;
+  padding-left: 0%;
+  font-weight: lighter;
+}
+h2 .main-starter_underline {
+  display: block;
+  max-width: 40px;
+  height: 2.5px;
+  margin-top: 5px;
+  background-color: #99E2D0;
 }
 
 .main-starter_choice {
@@ -159,6 +167,20 @@ main h4 {
   padding-bottom: 3%;
 }
 
+h2 {
+  font-size: 1em;
+  text-align: start;
+  padding-left: 0%;
+  font-weight: lighter;
+}
+h2 .main-dish_underline {
+  display: block;
+  max-width: 40px;
+  height: 2.5px;
+  margin-top: 5px;
+  background-color: #99E2D0;
+}
+
 .main-dish_choice {
   width: 80%;
   display: flex;
@@ -193,6 +215,20 @@ main h4 {
   flex-wrap: wrap;
   background-color: #F6F6F6;
   margin-left: 10%;
+}
+
+h2 {
+  font-size: 1em;
+  text-align: start;
+  padding-left: 0%;
+  font-weight: lighter;
+}
+h2 .main-dessert_underline {
+  display: block;
+  max-width: 40px;
+  height: 2.5px;
+  margin-top: 5px;
+  background-color: #99E2D0;
 }
 
 .main-dessert_choice {
