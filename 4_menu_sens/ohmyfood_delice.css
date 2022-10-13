@@ -181,6 +181,22 @@ main h4 {
   position: absolute;
   left: 90%;
 }
+main .check_circle {
+  position: absolute;
+  right: -85px;
+  display: none;
+  border: 20px solid #99E2D0;
+  background-color: #99E2D0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px 5px 10px 5px;
+}
+main i {
+  font-size: 1.8em;
+  display: none;
+  color: white;
+  background-color: #99E2D0;
+}
 
 .main-starter {
   width: auto;
@@ -225,6 +241,22 @@ h2 .main-starter_underline {
   background-color: #F5EDFF;
   transform: scale(1.05);
   box-shadow: 2px 5px 5px #8e8d8d;
+}
+.main-starter_choice:active {
+  border-color: #e0faf3;
+  background-color: #e0faf3;
+}
+.main-starter_choice:active h4 {
+  position: absolute;
+  left: 80%;
+}
+.main-starter_choice:active i {
+  display: block;
+}
+.main-starter_choice:active .check_circle {
+  position: absolute;
+  right: -5px;
+  display: block;
 }
 .main-starter_choice .main-starter_text {
   display: flex;
@@ -277,6 +309,22 @@ h2 .main-dish_underline {
   transform: scale(1.05);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
+.main-dish_choice:active {
+  border-color: #e0faf3;
+  background-color: #e0faf3;
+}
+.main-dish_choice:active h4 {
+  position: absolute;
+  left: 80%;
+}
+.main-dish_choice:active i {
+  display: block;
+}
+.main-dish_choice:active .check_circle {
+  position: absolute;
+  right: -5px;
+  display: block;
+}
 .main-dish_choice .main-dish_text {
   display: flex;
   flex-direction: column;
@@ -326,6 +374,22 @@ h2 .main-dessert_underline {
   background-color: #F5EDFF;
   transform: scale(1.05);
   box-shadow: 2px 5px 5px #8e8d8d;
+}
+.main-dessert_choice:active {
+  border-color: #e0faf3;
+  background-color: #e0faf3;
+}
+.main-dessert_choice:active h4 {
+  position: absolute;
+  left: 80%;
+}
+.main-dessert_choice:active i {
+  display: block;
+}
+.main-dessert_choice:active .check_circle {
+  position: absolute;
+  right: -5px;
+  display: block;
 }
 .main-dessert_choice .main-dessert_text {
   display: flex;
@@ -451,6 +515,12 @@ footer h5 {
     position: absolute;
     left: 90%;
   }
+  main .check_circle {
+    padding: 10px 0px 14px 0px;
+  }
+  main i {
+    font-size: 1.6em;
+  }
   main .main-starter {
     width: 100%;
     background-color: #F6F6F6;
@@ -520,5 +590,48 @@ footer h5 {
     align-items: center;
     margin-left: 0px;
     margin-bottom: -15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    justify-content: flex-start;
+  }
+  header #delice h1 {
+    font-size: 2.5em;
+  }
+  header #delice i {
+    font-size: 2em;
+    padding-left: 6%;
+  }
+  main {
+    justify-content: flex-start;
+  }
+  .main-starter {
+    margin-left: 2%;
+  }
+  .main-dish {
+    margin-left: 2%;
+  }
+  .main-dessert {
+    margin-left: 2%;
+  }
+  .button {
+    text-align: start;
+    padding-left: 7%;
+  }
+  footer {
+    padding-left: 5px;
+  }
+  .main-starter_choice:active h4 {
+    position: absolute;
+    left: 73%;
+  }
+  .main-dish_choice:active h4 {
+    position: absolute;
+    left: 73%;
+  }
+  .main-dessert_choice:active h4 {
+    position: absolute;
+    left: 73%;
   }
 }/*# sourceMappingURL=ohmyfood_delice.css.map */

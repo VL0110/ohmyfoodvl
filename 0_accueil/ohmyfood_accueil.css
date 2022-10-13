@@ -326,6 +326,7 @@ footer h5 {
   header {
     justify-content: center;
     text-align: center;
+    height: 410px;
   }
   header #logo_ohmyfood {
     padding-left: 0px;
@@ -366,6 +367,7 @@ footer h5 {
     margin-right: 0%;
   }
   .main-block_operation {
+    width: 70%;
     display: flex;
     align-items: center;
     position: relative;
@@ -414,5 +416,23 @@ footer h5 {
     border: 30px solid #353535;
     background-color: #353535;
     padding-left: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  body {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .main-block1 {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .main-block2 {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  footer {
+    padding-left: 5px;
   }
 }/*# sourceMappingURL=ohmyfood_accueil.css.map */
