@@ -16,7 +16,7 @@ a {
 }
 
 /* Loader */
-/* header / main / footer */
+/* header */
 header {
   width: auto;
   height: 370px;
@@ -81,6 +81,7 @@ header .purple_button:hover {
   box-shadow: 2px 5px 5px #8e8d8d;
 }
 
+/* main */
 .main-block1 {
   width: auto;
   display: flex;
@@ -121,6 +122,25 @@ header .purple_button:hover {
 }
 .main-block_operation:hover i {
   color: #9356DC;
+  transform: rotate(180deg);
+  -webkit-animation: rotate 0.5s both;
+          animation: rotate 0.5s both;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .main-block_operation h4 {
   color: black;
@@ -200,7 +220,7 @@ header .purple_button:hover {
 }
 .main-block_restaurant i {
   color: #353535;
-  font-size: 1.4em;
+  font-size: 1.8em;
   padding-left: 85%;
   margin-top: -53px;
   text-align: center;
@@ -218,6 +238,7 @@ header .purple_button:hover {
   right: 15px;
 }
 
+/* footer */
 footer {
   width: auto;
   height: 280px;

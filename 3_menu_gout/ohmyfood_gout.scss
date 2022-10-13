@@ -198,7 +198,7 @@ left: 90%;
   background-color: $tertiary;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  padding: 10px 5px 10px 5px;       
+  padding: 10px 5px 12px 5px;       
   }
   i 
   {
@@ -206,7 +206,17 @@ left: 90%;
     display: none;
     color:white;
     background-color: $tertiary;
+    transform: rotate(180deg);
+    animation: rotate 0.5s both;
     }
+}
+@keyframes rotate {
+  0% {
+      transform: rotate(0);
+}
+100% {
+      transform: rotate(360deg);
+  }
 }
 
 .main-starter
@@ -254,11 +264,6 @@ h2
     background-color: #F5EDFF;
     transform: scale(1.05);
     box-shadow: $shadowhover;
-  }
-  &:active
-  {
-    border-color: #e0faf3;
-    background-color: #e0faf3;
     h4 
     {
     position: absolute;
@@ -330,11 +335,6 @@ h2
       background-color: #F5EDFF;
       transform: scale(1.05);
       box-shadow: $shadowhover;
-    }
-    &:active
-    {
-      border-color: #e0faf3;
-      background-color: #e0faf3;
       h4 
       {
       position: absolute;
@@ -405,11 +405,6 @@ h2
       background-color: #F5EDFF;
       transform: scale(1.05);
       box-shadow: $shadowhover;
-    }
-    &:active
-    {
-      border-color: #e0faf3;
-      background-color: #e0faf3;
       h4 
       {
       position: absolute;

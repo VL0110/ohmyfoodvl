@@ -27,8 +27,7 @@ a
 /* Loader */
 
 
-
-/* header / main / footer */
+/* header */
 
 header
 {
@@ -102,6 +101,8 @@ header
       
 }
 
+/* main */
+
 .main-block1
 {
   width: auto;
@@ -145,6 +146,16 @@ header
         i 
         {
           color: $primary;
+          transform: rotate(180deg);
+          animation: rotate 0.5s both;
+          }
+      }
+      @keyframes rotate {
+        0% {
+            transform: rotate(0);
+      }
+      100% {
+            transform: rotate(360deg);
         }
       }
       h4 
@@ -231,14 +242,14 @@ header
       margin: 25px 100px 5px 25px;
       margin-top: -1px;
     }
-    i 
-    {
+      i 
+      {
       color: #353535;
-      font-size: 1.4em;
+      font-size: 1.8em;
       padding-left: 85%;
       margin-top: -53px;
       text-align: center;
-    }
+      }
     .new
     {
       font-size: 0.9em;
@@ -254,6 +265,7 @@ header
     }
   }
  
+  /* footer */
 
   footer 
   {

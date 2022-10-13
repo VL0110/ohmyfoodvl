@@ -195,15 +195,35 @@ main .check_circle {
   background-color: #99E2D0;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 5px 12px 5px;
 }
 main i {
   font-size: 1.8em;
   display: none;
   color: white;
   background-color: #99E2D0;
+  transform: rotate(180deg);
+  -webkit-animation: rotate 0.5s both;
+          animation: rotate 0.5s both;
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .main-starter {
   width: auto;
   text-align: center;
@@ -248,18 +268,14 @@ h2 .main-starter_underline {
   transform: scale(1.05);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
-.main-starter_choice:active {
-  border-color: #e0faf3;
-  background-color: #e0faf3;
-}
-.main-starter_choice:active h4 {
+.main-starter_choice:hover h4 {
   position: absolute;
   left: 80%;
 }
-.main-starter_choice:active i {
+.main-starter_choice:hover i {
   display: block;
 }
-.main-starter_choice:active .check_circle {
+.main-starter_choice:hover .check_circle {
   position: absolute;
   right: -5px;
   display: block;
@@ -315,18 +331,14 @@ h2 .main-dish_underline {
   transform: scale(1.05);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
-.main-dish_choice:active {
-  border-color: #e0faf3;
-  background-color: #e0faf3;
-}
-.main-dish_choice:active h4 {
+.main-dish_choice:hover h4 {
   position: absolute;
   left: 80%;
 }
-.main-dish_choice:active i {
+.main-dish_choice:hover i {
   display: block;
 }
-.main-dish_choice:active .check_circle {
+.main-dish_choice:hover .check_circle {
   position: absolute;
   right: -5px;
   display: block;
@@ -381,18 +393,14 @@ h2 .main-dessert_underline {
   transform: scale(1.05);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
-.main-dessert_choice:active {
-  border-color: #e0faf3;
-  background-color: #e0faf3;
-}
-.main-dessert_choice:active h4 {
+.main-dessert_choice:hover h4 {
   position: absolute;
   left: 80%;
 }
-.main-dessert_choice:active i {
+.main-dessert_choice:hover i {
   display: block;
 }
-.main-dessert_choice:active .check_circle {
+.main-dessert_choice:hover .check_circle {
   position: absolute;
   right: -5px;
   display: block;
