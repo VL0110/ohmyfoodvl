@@ -1,5 +1,21 @@
 /*Version Ordinateur +992px*/
 /* header / main / footer */
+@-webkit-keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 h1 {
   font-family: "Shrikhand", Arial, sans-serif;
 }
@@ -11,10 +27,97 @@ body {
   flex-direction: column;
   width: auto;
   margin: 0px;
+  -webkit-animation: slide 2s linear;
+          animation: slide 2s linear;
+}
+
+main {
+  -webkit-animation: slide 3s linear;
+          animation: slide 3s linear;
 }
 
 a {
   text-decoration: none;
+}
+
+/* Loader */
+@-webkit-keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes spinner_border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes spinner_border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.spinner {
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  position: fixed;
+  -webkit-animation: spinner 2s linear;
+          animation: spinner 2s linear;
+  visibility: hidden;
+}
+.spinner .spinner_border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid transparent;
+  border-top: 10px solid #99E2D0;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spinner_border 2s linear;
+          animation: spinner_border 2s linear;
 }
 
 /* Loader Menus  */
@@ -444,8 +547,8 @@ footer .footer_block {
   margin-bottom: -15px;
 }
 footer img {
-  width: 300px;
-  padding: 10px 0px 0px 0px;
+  width: 170px;
+  padding: 20px 0px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
