@@ -41,7 +41,7 @@ a {
     visibility: visible;
     opacity: 0.9;
   }
-  70% {
+  80% {
     opacity: 0.9;
   }
   100% {
@@ -54,7 +54,7 @@ a {
     visibility: visible;
     opacity: 0.9;
   }
-  70% {
+  80% {
     opacity: 0.9;
   }
   100% {
@@ -92,10 +92,13 @@ a {
 }
 .spinner {
   height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
-  position: absolute;
-  top: 20%;
-  left: 50%;
+  background-color: white;
+  position: relative;
   position: fixed;
   -webkit-animation: spinner 2s linear;
           animation: spinner 2s linear;
@@ -109,10 +112,20 @@ a {
   border-top: 10px solid #99E2D0;
   border-bottom: 10px solid #FF79DA;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 140px;
+  height: 140px;
   -webkit-animation: spinner_border 2s linear;
           animation: spinner_border 2s linear;
+}
+.spinner .spinner_border img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
 }
 
 /* header */
@@ -173,7 +186,7 @@ header .purple_button {
   width: 30%;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   padding: 20px 25px 20px 25px;
-  box-shadow: 2px 5px 5px #c4c4c4;
+  box-shadow: 2px 2px 2px #dadada;
   margin-left: 50px;
   transform: scale(1);
   transition: all 400ms;
@@ -250,6 +263,7 @@ header .purple_button:hover {
 .main-block1 {
   width: auto;
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: white;
@@ -282,7 +296,7 @@ header .purple_button:hover {
 .main-block_operation:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
 .main-block_operation:hover i {
@@ -334,7 +348,7 @@ header .purple_button:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: white;
   margin-bottom: 50px;
   margin-left: 40px;
@@ -364,14 +378,11 @@ header .purple_button:hover {
 .main-block_restaurant:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
 .main-block_restaurant:hover .new {
-  transform: scale(1.05);
-  border: 5px solid #9356DC;
-  background-color: #9356DC;
-  color: white;
+  transform: scale(1.1);
 }
 .main-block_restaurant img {
   width: 100%;
@@ -386,15 +397,8 @@ header .purple_button:hover {
 }
 .main-block_restaurant p {
   border-radius: 20px;
-  margin: 25px 100px 5px 25px;
+  margin: 5px 100px 5px 25px;
   margin-top: -1px;
-}
-.main-block_restaurant i {
-  color: #353535;
-  font-size: 1.8em;
-  padding-left: 85%;
-  margin-top: -53px;
-  text-align: center;
 }
 .main-block_restaurant .new {
   font-size: 0.9em;
@@ -411,14 +415,42 @@ header .purple_button:hover {
   right: 15px;
 }
 
+/* heart */
+.restaurant-heart-empty {
+  font-size: 1.8em;
+  position: absolute;
+  top: 78%;
+  right: 6%;
+  color: #353535;
+  opacity: 0.9;
+}
+
+.restaurant-heart-filled {
+  font-size: 1.8em;
+  position: absolute;
+  top: 78%;
+  right: 6%;
+  background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+  transform: scale(0);
+}
+
+.main-block_restaurant:hover .restaurant-heart-filled {
+  opacity: 1;
+  transform: scale(1);
+}
+
 /* footer */
 footer {
   width: auto;
   height: 280px;
-  text-align: start;
   border: 10px solid #353535;
   background-color: #353535;
-  padding-left: 60px;
+  padding-left: 80px;
 }
 footer .footer_block {
   display: flex;
@@ -606,10 +638,36 @@ footer h5 {
     font-size: 1.6em;
   }
   footer {
+    width: auto;
     height: 270px;
+    text-align: start;
     border: 30px solid #353535;
     background-color: #353535;
     padding-left: 10px;
+  }
+  footer .footer_block {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-bottom: -15px;
+  }
+  footer img {
+    width: 170px;
+    padding: 20px 0px 0px 0px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  footer h4 {
+    font-size: 1em;
+    color: white;
+    margin-left: 15px;
+  }
+  footer h5 {
+    font-size: 1em;
+    color: white;
+    margin-left: 0px;
   }
 }
 @media screen and (max-width: 450px) {

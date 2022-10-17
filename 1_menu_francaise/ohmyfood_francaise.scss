@@ -62,7 +62,7 @@
       visibility: visible;
       opacity: 1;
   }
-  70% {
+  80% {
       opacity: 1;
   }
   100% {
@@ -75,10 +75,13 @@
 .spinner 
 {
   height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
-  position: absolute;
-  top: 20%; 
-  left: 50%;
+  background-color: white;
+  position: relative;
   position: fixed;
   animation: spinner 2s linear;
   visibility: hidden;
@@ -91,8 +94,11 @@
     border-top: 10px solid $tertiary;
     border-bottom: 10px solid $secondary;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    top: 30%; 
+    left: 45%;
+    width: 140px;
+    height: 140px;
      animation: spinner_border 2s linear ;
   }
 }
@@ -156,7 +162,7 @@
       animation: slideDown 1.2s;
     }
 
-    /* header / main / footer */
+    /* header */
 
 
     header
@@ -233,10 +239,43 @@
       }
  }   
 
+   /* heart */
+
+   .francaise-heart-empty
+   {
+     font-size: 1.8em;
+     position: absolute;
+     top: 78%;
+     right: 6%;
+     color: #353535;
+     opacity: 0.9;
+   }
+   .francaise-heart-filled
+     {
+       font-size: 1.8em;
+       position: absolute;
+       top: 78%;
+       right: 6%;
+       background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+       background-clip: text;
+       color: transparent;
+       opacity: 0;
+       transition: all 600ms ease-in-out ;
+       transform: scale(0);
+     }
+     #francaise:hover  .francaise-heart-filled
+     {
+       opacity: 1;
+       transform: scale(1);
+     }
+
+     /* main */
+
 main 
 {
   width: auto;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: #F6F6F6;
   padding-top: 0px;
@@ -332,7 +371,7 @@ h2
       {
         border-color: #F5EDFF;
         background-color: #F5EDFF;
-        transform: scale(1.05);
+        transform: scale(1.03);
         box-shadow: $shadowhover;
         h4 
         {
@@ -402,7 +441,7 @@ h2
         {
           border-color: #F5EDFF;
           background-color: #F5EDFF;
-          transform: scale(1.05);
+          transform: scale(1.03);
           box-shadow: $shadowhover;
           h4 
           {
@@ -472,7 +511,7 @@ h2
         {
           border-color: #F5EDFF;
           background-color: #F5EDFF;
-          transform: scale(1.05);
+          transform: scale(1.03);
           box-shadow: $shadowhover;
           h4 
           {
@@ -514,7 +553,7 @@ h2
    width: 30%;
    background: $degrade;
    padding: 20px 70px 20px 70px ;
-   box-shadow: $shadow;
+   box-shadow: $softshadow;
    transform: scale(1);
    transition: all 400ms;
    &:hover
@@ -524,6 +563,8 @@ h2
    }
  }
 } 
+
+/* footer */
 
 footer 
 {
@@ -566,7 +607,6 @@ footer
 
 /*Version mobile -768px */
 
-
 @media screen and (max-width: 768px) {
 
     /* header / main / footer */
@@ -608,14 +648,14 @@ footer
         top: 450px;
         h1
         {
-          font-size: 2.5em;
-          margin-left: 15%;
+          font-size: 2em;
+          margin-left: 10%;
         }
         i 
         {
           font-size: 2em;
-          padding-left: 18%;
-          padding-top: 40px;
+          padding-left: 20%;
+          padding-top: 30px;
         }
       }
     }  
@@ -662,19 +702,28 @@ i
       background-color: white;
       margin-left: 2%;
       margin-right: 3%;
+      &:hover 
+      {
+        h4 
+        {
+        position: absolute;
+        left: 75%;
+        }
+      } 
       .main-starter_text
       {
       margin-left: 10px;
       text-align: start;
       }
       } 
- } 
+    } 
+ 
 
  .main-dish
 {
   width: 100%;
   background-color: #F6F6F6;
-  padding-top: 0px;
+  padding-top: 0%;
       .main-dish_choice
       {
       display: flex;
@@ -685,13 +734,21 @@ i
       background-color: white;
       margin-left: 2%;
       margin-right: 3%;
+      &:hover 
+      {
+        h4 
+        {
+        position: absolute;
+        left: 75%;
+        }
+      } 
       .main-dish_text
       {
       margin-left: 10px;
       text-align: start;
       }
       } 
- } 
+ }
 
  .main-dessert
 {
@@ -708,6 +765,14 @@ i
       background-color: white;
       margin-left: 2%;
       margin-right: 3%;
+      &:hover 
+      {
+        h4 
+        {
+        position: absolute;
+        left: 75%;
+        }
+      }
       .main-dessert_text
       {
       margin-left: 10px;
@@ -734,84 +799,18 @@ footer
    }
 }
 }
+
 @media screen and (max-width: 600px) {
 
   body 
 {
       justify-content: flex-start;
 }
-header
-{
-#francaise
-{
-h1
-{
-  font-size: 2.5em;
-}
-i 
-{
-  font-size: 2em;
-  padding-left: 6%;
-}
-}
-}
-main 
-{
-  justify-content: flex-start;
-} 
-.main-starter
-{
-  margin-left: 2%;
-}
-.main-dish
-{
-  margin-left: 2%;
-}
-.main-dessert
-{
-  margin-left: 2%;
-}
-.button 
-{
- text-align: start;
- padding-left: 7%;
-}
+
+
 footer 
 {
    padding-left: 5px;
 }
 
-  .main-starter_choice
-  {
-  &:active
-  {
-    h4 
-    {
-    position: absolute;
-    left: 73%;
-    }
-  }
-}
-  .main-dish_choice
-  {
-  &:active
-  {
-    h4 
-    {
-    position: absolute;
-    left: 73%;
-    }
-  }
-}
-  .main-dessert_choice
-  {
-  &:active
-  {
-    h4 
-    {
-    position: absolute;
-    left: 73%;
-    }
-  }
-}
 }

@@ -264,7 +264,8 @@ header #francaise i {
 
 main {
   width: auto;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: #F6F6F6;
   padding-top: 0px;
@@ -601,13 +602,13 @@ footer h5 {
     top: 450px;
   }
   header #francaise h1 {
-    font-size: 2.5em;
-    margin-left: 15%;
+    font-size: 2em;
+    margin-left: 10%;
   }
   header #francaise i {
     font-size: 2em;
-    padding-left: 18%;
-    padding-top: 40px;
+    padding-left: 20%;
+    padding-top: 30px;
   }
   main {
     flex-direction: column;
@@ -646,6 +647,10 @@ footer h5 {
     margin-left: 2%;
     margin-right: 3%;
   }
+  main .main-starter .main-starter_choice:hover h4 {
+    position: absolute;
+    left: 75%;
+  }
   main .main-starter .main-starter_choice .main-starter_text {
     margin-left: 10px;
     text-align: start;
@@ -653,7 +658,7 @@ footer h5 {
   main .main-dish {
     width: 100%;
     background-color: #F6F6F6;
-    padding-top: 0px;
+    padding-top: 0%;
   }
   main .main-dish .main-dish_choice {
     display: flex;
@@ -664,6 +669,10 @@ footer h5 {
     background-color: white;
     margin-left: 2%;
     margin-right: 3%;
+  }
+  main .main-dish .main-dish_choice:hover h4 {
+    position: absolute;
+    left: 75%;
   }
   main .main-dish .main-dish_choice .main-dish_text {
     margin-left: 10px;
@@ -683,6 +692,10 @@ footer h5 {
     background-color: white;
     margin-left: 2%;
     margin-right: 3%;
+  }
+  main .main-dessert .main-dessert_choice:hover h4 {
+    position: absolute;
+    left: 75%;
   }
   main .main-dessert .main-dessert_choice .main-dessert_text {
     margin-left: 10px;
@@ -706,42 +719,7 @@ footer h5 {
   body {
     justify-content: flex-start;
   }
-  header #francaise h1 {
-    font-size: 2.5em;
-  }
-  header #francaise i {
-    font-size: 2em;
-    padding-left: 6%;
-  }
-  main {
-    justify-content: flex-start;
-  }
-  .main-starter {
-    margin-left: 2%;
-  }
-  .main-dish {
-    margin-left: 2%;
-  }
-  .main-dessert {
-    margin-left: 2%;
-  }
-  .button {
-    text-align: start;
-    padding-left: 7%;
-  }
   footer {
     padding-left: 5px;
-  }
-  .main-starter_choice:active h4 {
-    position: absolute;
-    left: 73%;
-  }
-  .main-dish_choice:active h4 {
-    position: absolute;
-    left: 73%;
-  }
-  .main-dessert_choice:active h4 {
-    position: absolute;
-    left: 73%;
   }
 }/*# sourceMappingURL=ohmyfood_francaise.css.map */
