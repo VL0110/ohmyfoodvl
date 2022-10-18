@@ -31,11 +31,6 @@ body {
           animation: slide 2s linear;
 }
 
-main {
-  -webkit-animation: slide 3s linear;
-          animation: slide 3s linear;
-}
-
 a {
   text-decoration: none;
 }
@@ -97,14 +92,18 @@ a {
 }
 .spinner {
   height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
-  position: absolute;
-  top: 20%;
-  left: 50%;
+  background-color: #FFF5FD;
+  position: relative;
   position: fixed;
   -webkit-animation: spinner 2s linear;
           animation: spinner 2s linear;
   visibility: hidden;
+  z-index: 999;
 }
 .spinner .spinner_border {
   display: flex;
@@ -114,10 +113,20 @@ a {
   border-top: 10px solid #99E2D0;
   border-bottom: 10px solid #FF79DA;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: 140px;
+  height: 140px;
   -webkit-animation: spinner_border 2s linear;
           animation: spinner_border 2s linear;
+}
+.spinner .spinner_border img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-align: center;
 }
 
 /* Loader Menus  */
@@ -195,16 +204,23 @@ a {
           animation: slideDown 1.2s;
 }
 
-/* header / main / footer */
+#case-10 {
+  transition: 0.5s;
+  -webkit-animation: slideDown 1.3s;
+          animation: slideDown 1.3s;
+}
+
+/* header */
 header {
   width: auto;
-  height: auto;
+  height: 665px;
   justify-content: center;
   background-color: white;
 }
 header #logo_ohmyfood {
   width: auto;
-  height: 15%;
+  height: 8%;
+  align-items: center;
   border: 20px solid white;
   background-color: white;
   display: flex;
@@ -225,6 +241,7 @@ header #logo_ohmyfood i {
   padding-top: 13px;
   position: absolute;
   left: 20px;
+  top: 20px;
 }
 header #logo_ohmyfood i:hover {
   color: #9356DC;
@@ -241,27 +258,56 @@ header #img_francaise img {
      object-fit: cover;
   margin-left: 10%;
 }
-header #francaise {
+
+#francaise {
   width: auto;
   display: flex;
   justify-content: center;
+  position: relative;
   border: 15px solid #F6F6F6;
   background-color: #F6F6F6;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  margin-left: 0%;
+  padding-left: 0%;
 }
-header #francaise h1 {
+#francaise h1 {
   font-size: 3em;
   text-align: start;
 }
-header #francaise i {
+
+/* heart */
+.francaise-heart-empty {
+  font-size: 2.4em;
+  position: absolute;
+  top: 33%;
+  right: 20%;
   color: #353535;
-  font-size: 2.5em;
-  padding-left: 6%;
-  padding-top: 45px;
+  opacity: 0.9;
+}
+.francaise-heart-empty:hover {
+  opacity: 0;
+  transform: scale(0);
 }
 
+.francaise-heart-filled {
+  font-size: 2.4em;
+  position: absolute;
+  top: 33%;
+  right: 20%;
+  background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+  transform: scale(0);
+}
+.francaise-heart-filled:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* main */
 main {
   width: auto;
   display: flex;
@@ -340,13 +386,14 @@ h2 {
 h2 .main-starter_underline {
   display: block;
   max-width: 40px;
-  height: 3px;
+  height: 2.5px;
   margin-top: 5px;
   background-color: #99E2D0;
 }
 
 .main-starter_choice {
   width: 80%;
+  height: 83px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -363,7 +410,7 @@ h2 .main-starter_underline {
 .main-starter_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
 .main-starter_choice:hover h4 {
@@ -410,6 +457,7 @@ h2 .main-dish_underline {
 
 .main-dish_choice {
   width: 80%;
+  height: 83px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -426,7 +474,7 @@ h2 .main-dish_underline {
 .main-dish_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
 .main-dish_choice:hover h4 {
@@ -472,6 +520,7 @@ h2 .main-dessert_underline {
 
 .main-dessert_choice {
   width: 80%;
+  height: 83px;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -488,7 +537,7 @@ h2 .main-dessert_underline {
 .main-dessert_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
 .main-dessert_choice:hover h4 {
@@ -524,15 +573,18 @@ h2 .main-dessert_underline {
   width: 30%;
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   padding: 20px 70px 20px 70px;
-  box-shadow: 2px 5px 5px #c4c4c4;
+  box-shadow: 2px 2px 2px #dadada;
   transform: scale(1);
   transition: all 400ms;
+  opacity: 1;
 }
 .button .purple_button:hover {
   transform: scale(1.15);
   box-shadow: 2px 5px 5px #8e8d8d;
+  opacity: 0.8;
 }
 
+/* footer */
 footer {
   width: auto;
   height: 270px;
@@ -566,11 +618,29 @@ footer h5 {
 }
 
 /*Version tablette 768px / 992px*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #francaise {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    border: 15px solid #F6F6F6;
+    background-color: #F6F6F6;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-left: 20%;
+  }
+  #francaise h1 {
+    font-size: 3em;
+    text-align: start;
+  }
+}
 /*Version mobile -768px */
 @media screen and (max-width: 768px) {
   /* header / main / footer */
   header {
     position: relative;
+    height: 575px;
   }
   header #logo_ohmyfood {
     border: 20px solid white;
@@ -600,15 +670,41 @@ footer h5 {
     border-top-right-radius: 45px;
     position: absolute;
     top: 450px;
+    padding-left: 0%;
   }
   header #francaise h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-left: 10%;
   }
-  header #francaise i {
+  /* heart */
+  .francaise-heart-empty {
     font-size: 2em;
-    padding-left: 20%;
-    padding-top: 30px;
+    position: absolute;
+    top: 33%;
+    right: 20%;
+    color: #353535;
+    opacity: 0.9;
+  }
+  .francaise-heart-empty:hover {
+    opacity: 0;
+    transform: scale(0);
+  }
+  .francaise-heart-filled {
+    font-size: 2em;
+    position: absolute;
+    top: 33%;
+    right: 2%;
+    background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+    transform: scale(0);
+  }
+  .francaise-heart-filled:hover {
+    opacity: 1;
+    transform: scale(1);
   }
   main {
     flex-direction: column;
@@ -633,9 +729,9 @@ footer h5 {
     font-size: 1.6em;
   }
   main .main-starter {
-    width: 100%;
+    width: auto;
     background-color: #F6F6F6;
-    padding-top: 18%;
+    padding-top: 0%;
   }
   main .main-starter .main-starter_choice {
     display: flex;
@@ -656,7 +752,7 @@ footer h5 {
     text-align: start;
   }
   main .main-dish {
-    width: 100%;
+    width: auto;
     background-color: #F6F6F6;
     padding-top: 0%;
   }
@@ -679,7 +775,7 @@ footer h5 {
     text-align: start;
   }
   main .main-dessert {
-    width: 100%;
+    width: auto;
     background-color: #F6F6F6;
     padding-top: 0px;
   }
@@ -706,7 +802,7 @@ footer h5 {
     margin-left: 10%;
   }
   footer {
-    padding-left: 10px;
+    padding-left: 15px;
   }
   footer .footer_block {
     display: flex;
@@ -718,6 +814,19 @@ footer h5 {
 @media screen and (max-width: 600px) {
   body {
     justify-content: flex-start;
+  }
+  header #francaise {
+    padding-left: 0%;
+  }
+  header #francaise .francaise-heart-empty {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+  }
+  header #francaise .francaise-heart-filled {
+    position: absolute;
+    top: 30%;
+    right: 5%;
   }
   footer {
     padding-left: 5px;

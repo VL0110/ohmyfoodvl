@@ -8,6 +8,7 @@ $tertiary: #99E2D0;
 $degrade: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 $shadow: 2px 5px 5px #c4c4c4;
 $shadowhover: 2px 5px 5px #8e8d8d;
+$softshadow: 2px 2px 2px #dadada;
 
 @keyframes slide {
   from {
@@ -31,10 +32,6 @@ body
       width: auto;
       margin: 0px;
       animation: slide 2s linear;
-}
-main
-{
-animation: slide 3s linear;
 }
 a
 {
@@ -80,11 +77,12 @@ a
       right: 0;
       bottom: 0;
       margin: auto;
-      background-color: white;
+      background-color:  #FFF5FD;
       position: relative;
       position: fixed;
       animation: spinner 2s linear;
       visibility: hidden;
+      z-index: 999;
       .spinner_border
       {
         display: flex;
@@ -180,13 +178,14 @@ a
     header
     {
       width: auto;
-      height: auto;
+      height: 665px;
       justify-content: center;
       background-color: white;
       #logo_ohmyfood 
       {
         width: auto;
-        height: 15%;
+        height: 8%;
+        align-items: center;
         border: 20px solid white;
         background-color: white;
         display: flex;
@@ -207,6 +206,7 @@ a
           padding-top: 13px;
           position: absolute;
           left: 20px;
+          top:20px;
           &:hover
           {
             color: $primary;
@@ -227,60 +227,59 @@ a
         }
       }
     }  
-      .francaise
+      #francaise
       {
         width: auto;
         display: flex;
         justify-content: center;
+        position: relative;
         border: 15px solid #F6F6F6;
         background-color: #F6F6F6;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
-        margin-left: 0%;
+        padding-left: 0%;
         h1
         {
           font-size: 3em;
           text-align:start;
-        }
-        i 
-        {
-          padding-left: 6%;
-          padding-top: 45px;
-        .francaise-heart-empty
-        {
-          font-size: 1.8em;
-          position: absolute;
-          top: 78%;
-          right: 6%;
-          color: #353535;
-          opacity: 0.9;
-        }
-        .francaise-heart-filled
-          {
-            font-size: 1.8em;
-            position: absolute;
-            top: 78%;
-            right: 6%;
-            background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
-            background-clip: text;
-            color: transparent;
-            opacity: 0;
-            transition: all 600ms ease-in-out ;
-            transform: scale(0);
-          }
-          &:hover
-          {
-            opacity: 1;
-            transform: scale(1);
-          }
         }
       }
  
 
    /* heart */
 
-
-
+   .francaise-heart-empty
+   {
+     font-size: 2.4em;
+     position: absolute;
+     top: 33%;
+     right: 20%;
+     color: #353535;
+     opacity: 0.9;
+     &:hover
+     {
+       opacity: 0;
+       transform: scale(0);
+     }
+   }
+   .francaise-heart-filled
+     {
+       font-size: 2.4em;
+       position: absolute;
+       top: 33%;
+       right: 20%;
+       background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+       background-clip: text;
+       color: transparent;
+       opacity: 0;
+       transition: all 600ms ease-in-out ;
+       transform: scale(0);
+     &:hover
+     {
+       opacity: 1;
+       transform: scale(1);
+     }
+    }
      /* main */
 
 main 
@@ -359,7 +358,7 @@ h2
 {
   display: block;
   max-width: 40px;
-  height: 3px;
+  height: 2.5px;
   margin-top: 5px;
   background-color: $tertiary;
 }
@@ -367,6 +366,7 @@ h2
       .main-starter_choice
       {
         width: 80%;
+        height: 83px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -437,6 +437,7 @@ h2
       .main-dish_choice
       {
         width: 80%;
+        height: 83px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -507,6 +508,7 @@ h2
       .main-dessert_choice
       {
         width: 80%;
+        height: 83px;
         display: flex;
         flex-direction: row;
         position: relative;
@@ -568,10 +570,12 @@ h2
    box-shadow: $softshadow;
    transform: scale(1);
    transition: all 400ms;
+   opacity: 1;
    &:hover
    {
      transform: scale(1.15);
      box-shadow: $shadowhover;
+     opacity: 0.8;
    }
  }
 } 
@@ -617,6 +621,27 @@ footer
 
 /*Version tablette 768px / 992px*/
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  #francaise
+  {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    border: 15px solid #F6F6F6;
+    background-color: #F6F6F6;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-left: 20%;
+    h1
+    {
+      font-size: 3em;
+      text-align:start;
+    }
+  }
+
+}
 /*Version mobile -768px */
 
 @media screen and (max-width: 768px) {
@@ -626,6 +651,7 @@ footer
     header
     {
       position: relative;
+      height: 575px;
       #logo_ohmyfood 
       {
         border: 20px solid white;
@@ -658,19 +684,49 @@ footer
         border-top-right-radius: 45px;
         position: absolute;
         top: 450px;
+        padding-left: 0%;
         h1
         {
-          font-size: 2em;
+          font-size: 2.2em;
           margin-left: 10%;
-        }
-        i 
-        {
-          font-size: 2em;
-          padding-left: 20%;
-          padding-top: 30px;
         }
       }
     }  
+
+   /* heart */
+
+   .francaise-heart-empty
+   {
+     font-size: 2em;
+     position: absolute;
+     top: 33%;
+     right: 20%;
+     color: #353535;
+     opacity: 0.9;
+     &:hover
+     {
+       opacity: 0;
+       transform: scale(0);
+     }
+   }
+   .francaise-heart-filled
+     {
+       font-size: 2em;
+       position: absolute;
+       top: 33%;
+       right: 2%;
+       background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+       background-clip: text;
+       color: transparent;
+       opacity: 0;
+       transition: all 600ms ease-in-out ;
+       transform: scale(0);
+     &:hover
+     {
+       opacity: 1;
+       transform: scale(1);
+     }
+    }
 
 main 
 {
@@ -701,9 +757,9 @@ i
   }
  .main-starter
 {
-  width: 100%;
+  width: auto;
   background-color: #F6F6F6;
-  padding-top: 18%;
+  padding-top: 0%;
       .main-starter_choice
       {
       display: flex;
@@ -733,7 +789,7 @@ i
 
  .main-dish
 {
-  width: 100%;
+  width: auto;
   background-color: #F6F6F6;
   padding-top: 0%;
       .main-dish_choice
@@ -764,7 +820,7 @@ i
 
  .main-dessert
 {
-  width: 100%;
+  width: auto;
   background-color: #F6F6F6;
   padding-top: 0px;
       .main-dessert_choice
@@ -801,7 +857,7 @@ i
 
 footer 
 {
-   padding-left: 10px;
+   padding-left: 15px;
    .footer_block
    {
     display: flex;
@@ -818,8 +874,25 @@ footer
 {
       justify-content: flex-start;
 }
-
-
+header
+{
+#francaise
+{
+  padding-left: 0%;
+  .francaise-heart-empty
+  {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+  }
+  .francaise-heart-filled
+  {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+}
+}
 footer 
 {
    padding-left: 5px;

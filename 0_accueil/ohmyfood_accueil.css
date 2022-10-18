@@ -97,12 +97,13 @@ a {
   right: 0;
   bottom: 0;
   margin: auto;
-  background-color: white;
+  background-color: #FFF5FD;
   position: relative;
   position: fixed;
   -webkit-animation: spinner 2s linear;
           animation: spinner 2s linear;
   visibility: hidden;
+  z-index: 999;
 }
 .spinner .spinner_border {
   display: flex;
@@ -189,10 +190,12 @@ header .purple_button {
   margin-left: 50px;
   transform: scale(1);
   transition: all 400ms;
+  opacity: 1;
 }
 header .purple_button:hover {
   transform: scale(1.15);
   box-shadow: 2px 5px 5px #8e8d8d;
+  opacity: 0.8;
 }
 
 /* main */
@@ -230,8 +233,8 @@ header .purple_button:hover {
   transition: all 400ms;
 }
 .main-block_operation:hover {
-  border-color: #F5EDFF;
-  background-color: #F5EDFF;
+  border-color: white;
+  background-color: white;
   transform: scale(1.02);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
@@ -303,6 +306,8 @@ header .purple_button:hover {
   color: black;
   position: relative;
   text-decoration: none;
+  border: 1px solid #F7F7F7;
+  background-color: #F7F7F7;
   border-radius: 30px;
   margin-left: 30px;
   margin-right: 10px;
@@ -312,8 +317,8 @@ header .purple_button:hover {
   transition: all 400ms;
 }
 .main-block_restaurant:hover {
-  border-color: #F5EDFF;
-  background-color: #F5EDFF;
+  border-color: white;
+  background-color: white;
   transform: scale(1.03);
   box-shadow: 2px 5px 5px #8e8d8d;
 }
@@ -514,6 +519,14 @@ footer h5 {
   }
   header .purple_button {
     margin-left: 0px;
+  }
+  .restaurant-heart-empty {
+    position: absolute;
+    top: 81%;
+  }
+  .restaurant-heart-filled {
+    position: absolute;
+    top: 81%;
   }
   .main-block1 {
     width: 90%;

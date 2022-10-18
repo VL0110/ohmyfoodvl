@@ -8,6 +8,7 @@ $tertiary: #99E2D0;
 $degrade: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 $shadow: 2px 5px 5px #c4c4c4;
 $shadowhover: 2px 5px 5px #8e8d8d;
+$softshadow: 2px 2px 2px #dadada;
 
 @keyframes slide {
   from {
@@ -31,10 +32,6 @@ body
       width: auto;
       margin: 0px;
       animation: slide 2s linear;
-}
-main
-{
-animation: slide 3s linear;
 }
 a
 {
@@ -80,11 +77,12 @@ a
       right: 0;
       bottom: 0;
       margin: auto;
-      background-color: white;
+      background-color:  #FFF5FD;
       position: relative;
       position: fixed;
       animation: spinner 2s linear;
       visibility: hidden;
+      z-index: 999;
       .spinner_border
       {
         display: flex;
@@ -100,6 +98,13 @@ a
         width: 140px;
         height: 140px;
          animation: spinner_border 2s linear ;
+         img 
+         {
+          width: 90px;
+          height: 90px;
+          object-fit: cover;
+          text-align: center;
+         }
       }
     }
     
@@ -173,13 +178,14 @@ a
 header
 {
   width: auto;
-  height: auto;
+  height: 665px;
   justify-content: center;
   background-color: white;
   #logo_ohmyfood 
   {
     width: auto;
-    height: 15%;
+    height: 8%;
+    align-items: center;
     border: 20px solid white;
     background-color: white;
     display: flex;
@@ -200,6 +206,7 @@ header
       padding-top: 13px;
       position: absolute;
       left: 20px;
+      top:20px;
       &:hover
       {
         color: $primary;
@@ -219,57 +226,88 @@ header
       margin-left: 10%;
     }
   }
-  #enchantee
+}
+#enchantee
+{
+  width: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 15px solid #F6F6F6;
+  background-color: #F6F6F6;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding-left: 0%;
+  h1
   {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    border: 15px solid #F6F6F6;
-    background-color: #F6F6F6;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    margin-left: 0%;
-    h1
-    {
-      font-size: 3em;
-      text-align:start;
-    }
-    i 
-    {
-      color: #353535;
-      font-size: 2.5em;
-      padding-left: 6%;
-      padding-top: 45px;
-    }
+    font-size: 3em;
+    text-align:start;
   }
-}   
+}
+   /* heart */
+
+   .enchantee-heart-empty
+   {
+     font-size: 2.4em;
+     position: absolute;
+     top: 33%;
+     right: 20%;
+     color: #353535;
+     opacity: 0.9;
+     &:hover
+     {
+       opacity: 0;
+       transform: scale(0);
+     }
+   }
+   .enchantee-heart-filled
+     {
+       font-size: 2.4em;
+       position: absolute;
+       top: 33%;
+       right: 20%;
+       background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+       background-clip: text;
+       color: transparent;
+       opacity: 0;
+       transition: all 600ms ease-in-out ;
+       transform: scale(0);
+     &:hover
+     {
+       opacity: 1;
+       transform: scale(1);
+     }
+    }
+   
 
 /* main */
 
 main 
 {
-width: auto;
-flex-direction: row;
-justify-content: center;
-background-color: #F6F6F6;
-padding-top: 0px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F6F6F6;
+  padding-top: 0px;
+
 h3
 {
-color: black;
-margin-bottom: 0%;
+    color: black;
+    margin-bottom: 0%;
 }
 p 
 {
-color: black;
-margin-top: 3% ;
+  color: black;
+  margin-top: 3% ;
 }
 h4 
 {
-margin-top: 20px;
-padding-top: 0%;
-color: black;
-position: absolute;
-left: 90%;
+  margin-top: 20px;
+  padding-top: 0%;
+  color: black;
+  position: absolute;
+  left: 90%;
 }
 .check_circle
 {
@@ -328,6 +366,7 @@ h2
   .main-starter_choice
   {
     width: 80%;
+    height: 83px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -399,6 +438,7 @@ h2
   .main-dish_choice
   {
     width: 80%;
+    height: 83px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -469,6 +509,7 @@ h2
   .main-dessert_choice
   {
     width: 80%;
+    height: 83px;
     display: flex;
     flex-direction: row;
     position: relative;
@@ -530,10 +571,12 @@ padding: 20px 70px 20px 70px ;
 box-shadow: $softshadow;
 transform: scale(1);
 transition: all 400ms;
+opacity: 1;
 &:hover
 {
  transform: scale(1.15);
  box-shadow: $shadowhover;
+ opacity: 0.8;
 }
 }
 } 
@@ -579,6 +622,28 @@ margin-left: 0px;
 
 /*Version tablette 768px / 992px*/
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  #enchantee
+  {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    border: 15px solid #F6F6F6;
+    background-color: #F6F6F6;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-left: 10%;
+    h1
+    {
+      font-size: 3em;
+      text-align:start;
+    }
+  }
+
+}
+
 /*Version mobile -768px */
 
 @media screen and (max-width: 768px) {
@@ -588,6 +653,7 @@ margin-left: 0px;
   header
   {
     position: relative;
+    height: 575px;
     #logo_ohmyfood 
     {
       border: 20px solid white;
@@ -620,19 +686,49 @@ margin-left: 0px;
       border-top-right-radius: 45px;
       position: absolute;
       top: 450px;
+      padding-left: 0%;
       h1
       {
         font-size: 2em;
         margin-left: 10%;
       }
-      i 
-      {
-        font-size: 2em;
-        padding-left: 20%;
-        padding-top: 30px;
-      }
     }
   }  
+
+ /* heart */
+
+ .enchantee-heart-empty
+ {
+   font-size: 2em;
+   position: absolute;
+   top: 33%;
+   right: 20%;
+   color: #353535;
+   opacity: 0.9;
+   &:hover
+   {
+     opacity: 0;
+     transform: scale(0);
+   }
+ }
+ .enchantee-heart-filled
+   {
+     font-size: 2em;
+     position: absolute;
+     top: 33%;
+     right: 2%;
+     background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+     background-clip: text;
+     color: transparent;
+     opacity: 0;
+     transition: all 600ms ease-in-out ;
+     transform: scale(0);
+   &:hover
+   {
+     opacity: 1;
+     transform: scale(1);
+   }
+  }
 
 main 
 {
@@ -663,9 +759,9 @@ font-size: 1.6em;
 }
 .main-starter
 {
-width: 100%;
+  width: auto;
 background-color: #F6F6F6;
-padding-top: 18%;
+padding-top: 0%;
     .main-starter_choice
     {
     display: flex;
@@ -695,7 +791,7 @@ padding-top: 18%;
 
 .main-dish
 {
-width: 100%;
+  width: auto;
 background-color: #F6F6F6;
 padding-top: 0%;
     .main-dish_choice
@@ -726,7 +822,7 @@ padding-top: 0%;
 
 .main-dessert
 {
-width: 100%;
+  width: auto;
 background-color: #F6F6F6;
 padding-top: 0px;
     .main-dessert_choice
@@ -763,7 +859,7 @@ margin-left: 10%;
 
 footer 
 {
- padding-left: 10px;
+ padding-left: 15px;
  .footer_block
  {
   display: flex;
@@ -780,8 +876,25 @@ body
 {
     justify-content: flex-start;
 }
-
-
+header
+{
+#enchantee
+{
+  padding-left: 0%;
+  .enchantee-heart-empty
+  {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+  }
+  .enchantee-heart-filled
+  {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+}
+}
+}
 footer 
 {
  padding-left: 5px;
