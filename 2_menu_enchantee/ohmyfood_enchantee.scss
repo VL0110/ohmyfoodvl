@@ -7,7 +7,7 @@ $secondary: #FF79DA ;
 $tertiary: #99E2D0;
 $degrade: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
 $shadow: 2px 5px 5px #c4c4c4;
-$shadowhover: 2px 5px 5px #8e8d8d;
+$shadowhover: 1px 1px 4px 4px #d1d1d1;
 $softshadow: 2px 2px 2px #dadada;
 
 @keyframes slide {
@@ -31,12 +31,9 @@ body
       flex-direction: column;
       width: auto;
       margin: 0px;
-      animation: slide 2s linear;
+      animation: all 2s ease-in-out;
 }
-main
-{
-  animation-delay: 2s;
-}
+
 a
 {
   text-decoration: none;
@@ -47,11 +44,11 @@ a
     @keyframes spinner {
       0% {
           visibility: visible;
-          opacity: 0.9;
+          opacity: 1;
       }
       70% {
-          opacity: 0.9;
-      }
+        opacity: 0.9;
+    }
       100% {
           opacity: 0;
           visibility: hidden;
@@ -64,7 +61,7 @@ a
           opacity: 1;
       }
       70% {
-          opacity: 1;
+        opacity: 0.9;
       }
       100% {
           transform: rotate(360deg);
@@ -84,7 +81,7 @@ a
       background-color:  #FFF5FD;
       position: relative;
       position: fixed;
-      animation: spinner 2s linear;
+      animation: spinner 2s ease-in-out;
       visibility: hidden;
       z-index: 999;
       .spinner_border
@@ -101,7 +98,7 @@ a
         left: 45%;
         width: 140px;
         height: 140px;
-         animation: spinner_border 2s linear ;
+         animation: spinner_border 2s ease-in-out ;
          img 
          {
           width: 90px;
@@ -127,52 +124,52 @@ a
 
     #case-1
     {
-    transition: 1s;
+    transition: 4s;
     animation: slideDown 3.4s;
     }
     #case-2
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 3.5s;
     }
     #case-3
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 3.6s;
     }
     #case-4
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 3.7s;
     }
     #case-5
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 3.8s;
     }
     #case-6
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 3.9s;
     }
     #case-7
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 4s;
     }
     #case-8
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 4.1s;
     }
     #case-9
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 4.2s;
     }
     #case-10
     {
-      transition: 1s;
+      transition: 4s;
       animation: slideDown 4.3s;
     }
 
@@ -229,6 +226,8 @@ header
       border-radius: 5px;
       object-fit: cover;
       margin-left: 10%;
+      opacity: 0.8;
+      box-shadow: 1px 1px 1px 1px #d1d1d1;
     }
   }
 }
@@ -314,6 +313,10 @@ h4
   position: absolute;
   left: 90%;
 }
+h6 
+{
+  display: none;
+}
 .check_circle
 {
   position: absolute;
@@ -324,6 +327,7 @@ h4
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   padding: 10px 5px 12px 5px;       
+  opacity: 0.9; 
   }
   i 
   {
@@ -760,6 +764,8 @@ margin-left: 0px;
         object-fit: cover;
         margin-left: 0%;
         border-radius: 0px;
+        opacity: 1;
+        box-shadow: 0px 0px 0px 0px #d1d1d1;
       }
     }
     #enchantee
@@ -843,6 +849,7 @@ padding: 10px 0px 14px 0px;
 i 
 {
 font-size: 1.6em;
+}
 }
 .main-starter
 {
@@ -940,7 +947,7 @@ padding-top: 0px;
 .button 
 {
 width: 90%;
-margin-left: 10%;
+margin-left: 0%;
 }
 }
 
@@ -955,7 +962,7 @@ footer
   margin-bottom: -15px;
  }
 }
-}
+
 
 @media screen and (max-width: 600px) {
 
@@ -987,4 +994,108 @@ footer
  padding-left: 5px;
 }
 
+}
+
+@media screen and (max-width: 500px) {
+
+  #enchantee
+  {
+    i
+    {
+      position: absolute;
+      right: 10%;
+    }
+  }
+  main 
+  {
+h4 
+{
+  display: none;
+}
+h6 
+{
+  font-size: 1em;
+ display: block;
+ position: absolute;
+ left: 2%;
+ top: 50%;
+}
+.check_circle
+{
+  height: 78px;
+  border: 20px solid transparent;
+  background-color: transparent;
+  }
+  i 
+  {
+    color:$tertiary;
+    background-color: transparent;
+    padding-top: 100%;
+  }
+}
+
+  .main-starter_choice
+  {
+    position: relative;
+    flex-direction: column;
+    height: 130px;
+}
+.main-starter_text
+{
+position: absolute;
+top: 5%;
+}
+
+  .main-dish_choice
+  {
+    position: relative;
+    flex-direction: column;
+    height: 130px;
+    &:hover 
+    {
+      border-color: #F5EDFF;
+    h4 
+    {
+      position: absolute;
+      left: 0%;
+    }
+  } 
+  .main-dish_text
+  {
+  position: absolute;
+  top: 5%;
+  }
+}
+  .main-dessert_choice
+  {
+    position: relative;
+    flex-direction: column;
+    height: 130px;
+    &:hover 
+    {
+      border-color: #F5EDFF;
+    h4 
+    {
+      position: absolute;
+      left: 0%;
+    }
+  } 
+  .main-dessert_text
+  {
+  position: absolute;
+  top: 5%;
+  }
+}
+
+}
+
+@media screen and (max-width: 410px) {
+
+  #enchantee
+  {
+    i
+    {
+     display: none;
+    }
+  }
 }

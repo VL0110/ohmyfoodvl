@@ -27,13 +27,8 @@ body {
   flex-direction: column;
   width: auto;
   margin: 0px;
-  -webkit-animation: slide 2s linear;
-          animation: slide 2s linear;
-}
-
-main {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation: all 2s ease-in-out;
+          animation: all 2s ease-in-out;
 }
 
 a {
@@ -44,7 +39,7 @@ a {
 @-webkit-keyframes spinner {
   0% {
     visibility: visible;
-    opacity: 0.9;
+    opacity: 1;
   }
   70% {
     opacity: 0.9;
@@ -57,7 +52,7 @@ a {
 @keyframes spinner {
   0% {
     visibility: visible;
-    opacity: 0.9;
+    opacity: 1;
   }
   70% {
     opacity: 0.9;
@@ -73,7 +68,7 @@ a {
     opacity: 1;
   }
   70% {
-    opacity: 1;
+    opacity: 0.9;
   }
   100% {
     transform: rotate(360deg);
@@ -87,7 +82,7 @@ a {
     opacity: 1;
   }
   70% {
-    opacity: 1;
+    opacity: 0.9;
   }
   100% {
     transform: rotate(360deg);
@@ -105,8 +100,8 @@ a {
   background-color: #FFF5FD;
   position: relative;
   position: fixed;
-  -webkit-animation: spinner 2s linear;
-          animation: spinner 2s linear;
+  -webkit-animation: spinner 2s ease-in-out;
+          animation: spinner 2s ease-in-out;
   visibility: hidden;
   z-index: 999;
 }
@@ -123,8 +118,8 @@ a {
   left: 45%;
   width: 140px;
   height: 140px;
-  -webkit-animation: spinner_border 2s linear;
-          animation: spinner_border 2s linear;
+  -webkit-animation: spinner_border 2s ease-in-out;
+          animation: spinner_border 2s ease-in-out;
 }
 .spinner .spinner_border img {
   width: 90px;
@@ -156,55 +151,55 @@ a {
   }
 }
 #case-1 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 3.4s;
           animation: slideDown 3.4s;
 }
 
 #case-2 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 3.5s;
           animation: slideDown 3.5s;
 }
 
 #case-3 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 3.6s;
           animation: slideDown 3.6s;
 }
 
 #case-4 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 3.7s;
           animation: slideDown 3.7s;
 }
 
 #case-5 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 3.8s;
           animation: slideDown 3.8s;
 }
 
 #case-6 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 3.9s;
           animation: slideDown 3.9s;
 }
 
 #case-7 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 4s;
           animation: slideDown 4s;
 }
 
 #case-8 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 4.1s;
           animation: slideDown 4.1s;
 }
 
 #case-9 {
-  transition: 1s;
+  transition: 4s;
   -webkit-animation: slideDown 4.2s;
           animation: slideDown 4.2s;
 }
@@ -257,6 +252,8 @@ header #img_francaise img {
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: 10%;
+  opacity: 0.8;
+  box-shadow: 1px 1px 1px 1px #d1d1d1;
 }
 
 #francaise {
@@ -276,20 +273,22 @@ header #img_francaise img {
 }
 
 /* heart */
-.francaise-heart-empty {
+.restaurant-heart-empty {
   font-size: 2.4em;
   position: absolute;
   top: 33%;
   right: 20%;
   color: #353535;
-  opacity: 0.9;
+  opacity: 1;
+  transition: all 600ms ease-in-out;
+  transform: scale(1);
 }
-.francaise-heart-empty:hover {
+.restaurant-heart-empty:hover {
   opacity: 0;
   transform: scale(0);
 }
 
-.francaise-heart-filled {
+.restaurant-heart-filled {
   font-size: 2.4em;
   position: absolute;
   top: 33%;
@@ -302,7 +301,12 @@ header #img_francaise img {
   transition: all 600ms ease-in-out;
   transform: scale(0);
 }
-.francaise-heart-filled:hover {
+.restaurant-heart-filled:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.restaurant-heart-empty:hover .restaurant-heart-filled {
   opacity: 1;
   transform: scale(1);
 }
@@ -313,6 +317,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   background-color: #F6F6F6;
   padding-top: 0px;
 }
@@ -331,6 +336,9 @@ main h4 {
   position: absolute;
   left: 90%;
 }
+main h6 {
+  display: none;
+}
 main .check_circle {
   position: absolute;
   right: -85px;
@@ -340,6 +348,7 @@ main .check_circle {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   padding: 10px 5px 12px 5px;
+  opacity: 0.9;
 }
 main i {
   font-size: 1.8em;
@@ -411,7 +420,7 @@ h2 .main-starter_underline {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
   transform: scale(1.03);
-  box-shadow: 2px 5px 5px #8e8d8d;
+  box-shadow: 1px 1px 4px 4px #d1d1d1;
 }
 .main-starter_choice:hover h4 {
   position: absolute;
@@ -475,7 +484,7 @@ h2 .main-dish_underline {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
   transform: scale(1.03);
-  box-shadow: 2px 5px 5px #8e8d8d;
+  box-shadow: 1px 1px 4px 4px #d1d1d1;
 }
 .main-dish_choice:hover h4 {
   position: absolute;
@@ -538,7 +547,7 @@ h2 .main-dessert_underline {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
   transform: scale(1.03);
-  box-shadow: 2px 5px 5px #8e8d8d;
+  box-shadow: 1px 1px 4px 4px #d1d1d1;
 }
 .main-dessert_choice:hover h4 {
   position: absolute;
@@ -580,7 +589,7 @@ h2 .main-dessert_underline {
 }
 .button .purple_button:hover {
   transform: scale(1.15);
-  box-shadow: 2px 5px 5px #8e8d8d;
+  box-shadow: 1px 1px 4px 4px #d1d1d1;
   opacity: 0.8;
 }
 
@@ -721,6 +730,8 @@ footer h5 {
        object-fit: cover;
     margin-left: 0%;
     border-radius: 0px;
+    opacity: 1;
+    box-shadow: 0px 0px 0px 0px #d1d1d1;
   }
   header #francaise {
     width: 94%;
@@ -790,12 +801,12 @@ footer h5 {
   main i {
     font-size: 1.6em;
   }
-  main .main-starter {
+  .main-starter {
     width: auto;
     background-color: #F6F6F6;
     padding-top: 0%;
   }
-  main .main-starter .main-starter_choice {
+  .main-starter .main-starter_choice {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -805,20 +816,20 @@ footer h5 {
     margin-left: 2%;
     margin-right: 3%;
   }
-  main .main-starter .main-starter_choice:hover h4 {
+  .main-starter .main-starter_choice:hover h4 {
     position: absolute;
     left: 75%;
   }
-  main .main-starter .main-starter_choice .main-starter_text {
+  .main-starter .main-starter_choice .main-starter_text {
     margin-left: 10px;
     text-align: start;
   }
-  main .main-dish {
+  .main-dish {
     width: auto;
     background-color: #F6F6F6;
     padding-top: 0%;
   }
-  main .main-dish .main-dish_choice {
+  .main-dish .main-dish_choice {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -828,20 +839,20 @@ footer h5 {
     margin-left: 2%;
     margin-right: 3%;
   }
-  main .main-dish .main-dish_choice:hover h4 {
+  .main-dish .main-dish_choice:hover h4 {
     position: absolute;
     left: 75%;
   }
-  main .main-dish .main-dish_choice .main-dish_text {
+  .main-dish .main-dish_choice .main-dish_text {
     margin-left: 10px;
     text-align: start;
   }
-  main .main-dessert {
+  .main-dessert {
     width: auto;
     background-color: #F6F6F6;
     padding-top: 0px;
   }
-  main .main-dessert .main-dessert_choice {
+  .main-dessert .main-dessert_choice {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -851,28 +862,29 @@ footer h5 {
     margin-left: 2%;
     margin-right: 3%;
   }
-  main .main-dessert .main-dessert_choice:hover h4 {
+  .main-dessert .main-dessert_choice:hover h4 {
     position: absolute;
     left: 75%;
   }
-  main .main-dessert .main-dessert_choice .main-dessert_text {
+  .main-dessert .main-dessert_choice .main-dessert_text {
     margin-left: 10px;
     text-align: start;
   }
-  main .button {
+  .button {
     width: 90%;
-    margin-left: 10%;
-  }
-  footer {
-    padding-left: 15px;
-  }
-  footer .footer_block {
-    display: flex;
-    align-items: center;
-    margin-left: 0px;
-    margin-bottom: -15px;
+    margin-left: 0%;
   }
 }
+footer {
+  padding-left: 15px;
+}
+footer .footer_block {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  margin-bottom: -15px;
+}
+
 @media screen and (max-width: 600px) {
   body {
     justify-content: flex-start;
@@ -892,5 +904,77 @@ footer h5 {
   }
   footer {
     padding-left: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #francaise i {
+    position: absolute;
+    right: 10%;
+  }
+  main h4 {
+    display: none;
+  }
+  main h6 {
+    font-size: 1em;
+    display: block;
+    position: absolute;
+    left: 2%;
+    top: 50%;
+  }
+  main .check_circle {
+    height: 78px;
+    border: 20px solid transparent;
+    background-color: transparent;
+  }
+  main i {
+    color: #99E2D0;
+    background-color: transparent;
+    padding-top: 100%;
+  }
+  .main-starter_choice {
+    position: relative;
+    flex-direction: column;
+    height: 130px;
+  }
+  .main-starter_text {
+    position: absolute;
+    top: 5%;
+  }
+  .main-dish_choice {
+    position: relative;
+    flex-direction: column;
+    height: 130px;
+  }
+  .main-dish_choice:hover {
+    border-color: #F5EDFF;
+  }
+  .main-dish_choice:hover h4 {
+    position: absolute;
+    left: 0%;
+  }
+  .main-dish_choice .main-dish_text {
+    position: absolute;
+    top: 5%;
+  }
+  .main-dessert_choice {
+    position: relative;
+    flex-direction: column;
+    height: 130px;
+  }
+  .main-dessert_choice:hover {
+    border-color: #F5EDFF;
+  }
+  .main-dessert_choice:hover h4 {
+    position: absolute;
+    left: 0%;
+  }
+  .main-dessert_choice .main-dessert_text {
+    position: absolute;
+    top: 5%;
+  }
+}
+@media screen and (max-width: 410px) {
+  #francaise i {
+    display: none;
   }
 }/*# sourceMappingURL=ohmyfood_francaise.css.map */
