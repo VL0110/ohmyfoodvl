@@ -5,8 +5,8 @@ $primary: #9356DC;
 $secondary: #FF79DA ;
 $tertiary: #99E2D0;
 $degrade: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-$shadow: 2px 5px 5px #c4c4c4;
-$shadowhover: 1px 1px 4px 4px #d1d1d1;
+$shadow: 2px 5px 5px #e0dede;
+$shadowhover: 1px 1px 4px 4px #d9d6d6;
 $softshadow: 2px 2px 2px #dadada;
 
 @keyframes slide {
@@ -196,7 +196,6 @@ header
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: white;
   margin-left: 20px;
   margin-right: 150px;
   h2 
@@ -227,8 +226,8 @@ header
       transition: all 400ms;
       &:hover
       {
-        border-color: white;
-        background-color: white;
+        border-color: #F5EDFF;
+        background-color: #F5EDFF;
         transform: scale(1.02);
         box-shadow: $shadowhover;
         i 
@@ -280,7 +279,7 @@ header
   flex-direction: row;
   justify-content: center;
   background-color: white;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   margin-left: 40px;
   h2 
   {
@@ -695,12 +694,14 @@ footer
 
   body 
 {
+      width: auto;
       display: flex; 
       justify-content: flex-start;
       flex-direction: column;
 }
 header
 {
+     width: auto;
     height: 400px;
     #logo_ohmyfood 
     {
@@ -715,6 +716,10 @@ header
     font-size: 1em;
   }
 } 
+main
+{
+      width: auto;
+}
 .main-block1
 {
   margin-left: 0%;
@@ -724,9 +729,26 @@ header
 {
   margin-left: 0%;
   margin-right: 0%;
+  background-color: white;
+}
+.main-block_restaurant
+{
+  border: 1px solid #F7F7F7;
+  background-color: #F7F7F7;
+  margin-left: 2%;
+  &:hover 
+  {
+    border-color: white;
+    background-color: white;
+    .new 
+    {
+      transform: scale(1);
+    }
+  }
 }
 footer 
 {
+  width: auto;
    padding-left: 5px;
 }
 }

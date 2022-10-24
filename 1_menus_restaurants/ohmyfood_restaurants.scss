@@ -6,8 +6,8 @@ $primary: #9356DC;
 $secondary: #FF79DA ;
 $tertiary: #99E2D0;
 $degrade: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-$shadow: 2px 5px 5px #c4c4c4;
-$shadowhover: 1px 1px 4px 4px #d1d1d1;
+$shadow: 2px 5px 5px #e0dede;
+$shadowhover: 1px 1px 4px 4px #d9d6d6;
 $softshadow: 2px 2px 2px #dadada;
 
 @keyframes slide {
@@ -31,7 +31,6 @@ body
       flex-direction: column;
       width: auto;
       margin: 0px;
-      animation: all 2s ease-in-out;
 }
 
 a
@@ -315,13 +314,10 @@ h2
   border-radius: 20px;
   margin-bottom: 20px;
   box-shadow: $shadow;
-  transform: scale(1);
-  transition: all 400ms;
   &:hover 
   {
     border-color: #F5EDFF;
     background-color: #F5EDFF;
-    transform: scale(1.03);
     box-shadow: $shadowhover;
     h4 
     {
@@ -387,13 +383,10 @@ h2
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: $shadow;
-    transform: scale(1);
-    transition: all 400ms;
     &:hover 
     {
       border-color: #F5EDFF;
       background-color: #F5EDFF;
-      transform: scale(1.03);
       box-shadow: $shadowhover;
       h4 
       {
@@ -458,13 +451,10 @@ h2
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: $shadow;
-    transform: scale(1);
-    transition: all 400ms;
     &:hover 
     {
       border-color: #F5EDFF;
       background-color: #F5EDFF;
-      transform: scale(1.03);
       box-shadow: $shadowhover;
       h4 
       {
@@ -800,6 +790,8 @@ padding-top: 0%;
     margin-right: 3%;
     &:hover 
     {
+      border-color: #F5EDFF;
+      background-color: #F5EDFF;
       h4 
       {
       position: absolute;
@@ -832,6 +824,8 @@ padding-top: 0%;
     margin-right: 3%;
     &:hover 
     {
+      border-color: #F5EDFF;
+      background-color: #F5EDFF;
       h4 
       {
       position: absolute;
@@ -863,6 +857,8 @@ padding-top: 0px;
     margin-right: 3%;
     &:hover 
     {
+      border-color: #F5EDFF;
+      background-color: #F5EDFF;
       h4 
       {
       position: absolute;
@@ -928,6 +924,7 @@ footer
 
 body 
 {
+  width: auto;
     justify-content: flex-start;
 }
 header
@@ -996,6 +993,7 @@ h6
   height: 78px;
   border: 20px solid transparent;
   background-color: transparent;
+  padding: 80px 5px 12px 5px;      
   }
   i 
   {
@@ -1010,6 +1008,16 @@ h6
     position: relative;
     flex-direction: column;
     height: 130px;
+    &:hover 
+    {
+      border-color: #F5EDFF;
+      background-color: #F5EDFF;
+    h4 
+    {
+      position: absolute;
+      left: 0%;
+    }
+}
 }
 .main-starter_text
 {
@@ -1025,6 +1033,7 @@ top: 5%;
     &:hover 
     {
       border-color: #F5EDFF;
+      background-color: #F5EDFF;
     h4 
     {
       position: absolute;
@@ -1045,6 +1054,7 @@ top: 5%;
     &:hover 
     {
       border-color: #F5EDFF;
+      background-color: #F5EDFF;
     h4 
     {
       position: absolute;

@@ -27,8 +27,6 @@ body {
   flex-direction: column;
   width: auto;
   margin: 0px;
-  -webkit-animation: all 2s ease-in-out;
-          animation: all 2s ease-in-out;
 }
 
 a {
@@ -313,15 +311,12 @@ h2 .main-starter_underline {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 2px 5px 5px #c4c4c4;
-  transform: scale(1);
-  transition: all 400ms;
+  box-shadow: 2px 5px 5px #e0dede;
 }
 .main-starter_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.03);
-  box-shadow: 1px 1px 4px 4px #d1d1d1;
+  box-shadow: 1px 1px 4px 4px #d9d6d6;
 }
 .main-starter_choice:hover h4 {
   position: absolute;
@@ -377,15 +372,12 @@ h2 .main-dish_underline {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 2px 5px 5px #c4c4c4;
-  transform: scale(1);
-  transition: all 400ms;
+  box-shadow: 2px 5px 5px #e0dede;
 }
 .main-dish_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.03);
-  box-shadow: 1px 1px 4px 4px #d1d1d1;
+  box-shadow: 1px 1px 4px 4px #d9d6d6;
 }
 .main-dish_choice:hover h4 {
   position: absolute;
@@ -440,15 +432,12 @@ h2 .main-dessert_underline {
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
-  box-shadow: 2px 5px 5px #c4c4c4;
-  transform: scale(1);
-  transition: all 400ms;
+  box-shadow: 2px 5px 5px #e0dede;
 }
 .main-dessert_choice:hover {
   border-color: #F5EDFF;
   background-color: #F5EDFF;
-  transform: scale(1.03);
-  box-shadow: 1px 1px 4px 4px #d1d1d1;
+  box-shadow: 1px 1px 4px 4px #d9d6d6;
 }
 .main-dessert_choice:hover h4 {
   position: absolute;
@@ -490,7 +479,7 @@ h2 .main-dessert_underline {
 }
 .button .purple_button:hover {
   transform: scale(1.15);
-  box-shadow: 1px 1px 4px 4px #d1d1d1;
+  box-shadow: 1px 1px 4px 4px #d9d6d6;
   opacity: 0.8;
 }
 
@@ -715,6 +704,10 @@ footer a {
     margin-left: 2%;
     margin-right: 3%;
   }
+  .main-starter .main-starter_choice:hover {
+    border-color: #F5EDFF;
+    background-color: #F5EDFF;
+  }
   .main-starter .main-starter_choice:hover h4 {
     position: absolute;
     left: 75%;
@@ -738,6 +731,10 @@ footer a {
     margin-left: 2%;
     margin-right: 3%;
   }
+  .main-dish .main-dish_choice:hover {
+    border-color: #F5EDFF;
+    background-color: #F5EDFF;
+  }
   .main-dish .main-dish_choice:hover h4 {
     position: absolute;
     left: 75%;
@@ -760,6 +757,10 @@ footer a {
     background-color: white;
     margin-left: 2%;
     margin-right: 3%;
+  }
+  .main-dessert .main-dessert_choice:hover {
+    border-color: #F5EDFF;
+    background-color: #F5EDFF;
   }
   .main-dessert .main-dessert_choice:hover h4 {
     position: absolute;
@@ -808,6 +809,7 @@ footer a {
 }
 @media screen and (max-width: 550px) {
   body {
+    width: auto;
     justify-content: flex-start;
   }
   header #logo_ohmyfood {
@@ -855,6 +857,7 @@ footer a {
     height: 78px;
     border: 20px solid transparent;
     background-color: transparent;
+    padding: 80px 5px 12px 5px;
   }
   main i {
     color: #99E2D0;
@@ -865,6 +868,14 @@ footer a {
     position: relative;
     flex-direction: column;
     height: 130px;
+  }
+  .main-starter_choice:hover {
+    border-color: #F5EDFF;
+    background-color: #F5EDFF;
+  }
+  .main-starter_choice:hover h4 {
+    position: absolute;
+    left: 0%;
   }
   .main-starter_text {
     position: absolute;
@@ -877,6 +888,7 @@ footer a {
   }
   .main-dish_choice:hover {
     border-color: #F5EDFF;
+    background-color: #F5EDFF;
   }
   .main-dish_choice:hover h4 {
     position: absolute;
@@ -893,6 +905,7 @@ footer a {
   }
   .main-dessert_choice:hover {
     border-color: #F5EDFF;
+    background-color: #F5EDFF;
   }
   .main-dessert_choice:hover h4 {
     position: absolute;

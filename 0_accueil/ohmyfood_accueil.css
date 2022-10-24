@@ -196,7 +196,7 @@ header .purple_button {
 }
 header .purple_button:hover {
   transform: scale(1.15);
-  box-shadow: 1px 1px 4px 4px #d1d1d1;
+  box-shadow: 1px 1px 4px 4px #d9d6d6;
   opacity: 0.8;
 }
 
@@ -207,7 +207,6 @@ header .purple_button:hover {
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: white;
   margin-left: 20px;
   margin-right: 150px;
 }
@@ -231,15 +230,15 @@ header .purple_button:hover {
   border-radius: 30px;
   margin-bottom: 20px;
   margin-left: 50px;
-  box-shadow: 2px 5px 5px #c4c4c4;
+  box-shadow: 2px 5px 5px #e0dede;
   transform: scale(1);
   transition: all 400ms;
 }
 .main-block_operation:hover {
-  border-color: white;
-  background-color: white;
+  border-color: #F5EDFF;
+  background-color: #F5EDFF;
   transform: scale(1.02);
-  box-shadow: 1px 1px 4px 4px #d1d1d1;
+  box-shadow: 1px 1px 4px 4px #d9d6d6;
 }
 .main-block_operation:hover i {
   color: #9356DC;
@@ -292,7 +291,7 @@ header .purple_button:hover {
   flex-direction: row;
   justify-content: center;
   background-color: white;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   margin-left: 40px;
 }
 .main-block2 h2 {
@@ -316,7 +315,7 @@ header .purple_button:hover {
   margin-left: 30px;
   margin-right: 10px;
   margin-bottom: 25px;
-  box-shadow: 2px 5px 5px #c4c4c4;
+  box-shadow: 2px 5px 5px #e0dede;
   transform: scale(1);
   transition: all 400ms;
 }
@@ -324,7 +323,7 @@ header .purple_button:hover {
   border-color: white;
   background-color: white;
   transform: scale(1.03);
-  box-shadow: 1px 1px 4px 4px #d1d1d1;
+  box-shadow: 1px 1px 4px 4px #d9d6d6;
 }
 .main-block_restaurant:hover .new {
   transform: scale(1.1);
@@ -632,11 +631,13 @@ footer h6 {
 }
 @media screen and (max-width: 500px) {
   body {
+    width: auto;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
   }
   header {
+    width: auto;
     height: 400px;
   }
   header #logo_ohmyfood {
@@ -648,6 +649,9 @@ footer h6 {
   header p {
     font-size: 1em;
   }
+  main {
+    width: auto;
+  }
   .main-block1 {
     margin-left: 0%;
     margin-right: 0%;
@@ -655,8 +659,22 @@ footer h6 {
   .main-block2 {
     margin-left: 0%;
     margin-right: 0%;
+    background-color: white;
+  }
+  .main-block_restaurant {
+    border: 1px solid #F7F7F7;
+    background-color: #F7F7F7;
+    margin-left: 2%;
+  }
+  .main-block_restaurant:hover {
+    border-color: white;
+    background-color: white;
+  }
+  .main-block_restaurant:hover .new {
+    transform: scale(1);
   }
   footer {
+    width: auto;
     padding-left: 5px;
   }
 }/*# sourceMappingURL=ohmyfood_accueil.css.map */
