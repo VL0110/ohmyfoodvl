@@ -100,8 +100,8 @@ a {
   background-color: #FFF5FD;
   position: relative;
   position: fixed;
-  -webkit-animation: spinner 2s ease-in-out;
-          animation: spinner 2s ease-in-out;
+  -webkit-animation: spinner 2s ease-out;
+          animation: spinner 2s ease-out;
   visibility: hidden;
   z-index: 999;
 }
@@ -118,8 +118,8 @@ a {
   left: 45%;
   width: 140px;
   height: 140px;
-  -webkit-animation: spinner_border 2s ease-in-out;
-          animation: spinner_border 2s ease-in-out;
+  -webkit-animation: spinner_border 2s ease-out;
+          animation: spinner_border 2s ease-out;
 }
 .spinner .spinner_border img {
   width: 90px;
@@ -141,8 +141,7 @@ header #logo_ohmyfood {
   border: 20px solid white;
   background-color: white;
   padding-left: 30px;
-  transform: scale(1.02);
-  box-shadow: 2px 3px 5px #8e8d8d;
+  box-shadow: 0px 4px 4px #b3b2b2;
 }
 header #logo_ohmyfood img {
   background-color: white;
@@ -157,6 +156,7 @@ header #map {
   justify-content: center;
   margin-top: 2px;
   background-color: #EDEDED;
+  margin-top: 7px;
 }
 header #map i {
   margin-right: 10px;
@@ -215,6 +215,7 @@ header .purple_button:hover {
   padding-top: 20px;
   padding-left: 50px;
   padding-right: 70%;
+  padding-bottom: 1%;
 }
 
 .main-block_operation {
@@ -297,7 +298,8 @@ header .purple_button:hover {
 .main-block2 h2 {
   padding-top: 2%;
   padding-left: 2%;
-  padding-right: 70%;
+  padding-right: 73%;
+  padding-bottom: 1%;
 }
 
 .main-block_restaurant {
@@ -382,28 +384,30 @@ header .purple_button:hover {
   transform: scale(0);
 }
 
-.main-block_restaurant:hover .restaurant-heart-filled {
+.accueil_heart:hover .restaurant-heart-filled {
   opacity: 1;
   transform: scale(1);
 }
 
 /* footer */
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: auto;
   height: 280px;
   border: 10px solid #353535;
   background-color: #353535;
-  padding-left: 80px;
 }
 footer .footer_block {
   display: flex;
   align-items: center;
   margin-left: 0px;
-  margin-bottom: -15px;
+  margin-bottom: -18px;
 }
 footer img {
   width: 170px;
-  padding: 20px 0px 0px 0px;
+  padding: 30px 0px 0px 0px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -416,6 +420,11 @@ footer h5 {
   font-size: 1em;
   color: white;
   margin-left: 0px;
+}
+footer h6 {
+  font-size: 1em;
+  color: white;
+  margin-top: -5px;
 }
 
 @media screen and (max-width: 1350px) {
@@ -589,6 +598,9 @@ footer h5 {
     font-size: 1.6em;
   }
   footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border: 30px solid #353535;
     background-color: #353535;
     padding-left: 50px;
@@ -611,6 +623,11 @@ footer h5 {
     font-size: 1em;
     color: white;
     margin-left: 0px;
+  }
+  footer h6 {
+    font-size: 1em;
+    color: white;
+    margin-top: 0px;
   }
 }
 @media screen and (max-width: 500px) {
