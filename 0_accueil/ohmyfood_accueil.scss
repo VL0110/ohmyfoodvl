@@ -19,6 +19,9 @@ $softshadow: 2px 2px 2px #dadada;
 }
 body 
 {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
       font-family: 'Roboto', Arial, sans-serif;
       margin: 0px;
       animation: slide 2s linear;
@@ -36,7 +39,24 @@ a
   text-decoration: none;
 }
 
-/* Loader */
+/*Mixins Desktop*/
+
+@mixin flex 
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@mixin h2 
+{
+  padding-top: 2%;
+  padding-left: 2%;
+  padding-bottom: 1%;
+}
+
+    /* Loader */
+
 @keyframes spinner {
   0% {
       visibility: visible;
@@ -68,6 +88,8 @@ a
 
 .spinner 
 {
+  display: flex;
+  width: auto;
   height: 100%;
   top: 0;
   left: 0;
@@ -191,19 +213,13 @@ header
 
 .main-block1
 {
+  @include flex;
   width: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
   margin-left: 20px;
   margin-right: 150px;
   h2 
   {
-    padding-top: 20px;
-    padding-left: 50px;
-    padding-right: 70%;
-    padding-bottom: 1%;
+   @include h2;
   }
 }
 
@@ -272,21 +288,15 @@ header
  
  .main-block2
 {
+  @include flex;
   width: 95%;
   height: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
   background-color: white;
   margin-bottom: 80px;
   margin-left: 40px;
   h2 
   {
-    padding-top: 2%;
-    padding-left: 2%;
-    padding-right: 73%;
-    padding-bottom: 1%;
+    @include h2;
   }
 }
   .main-block_restaurant
@@ -438,7 +448,6 @@ header
       {
         padding-top: 20px;
         padding-left: 50px;
-        padding-right: 60%;
       }
     }  
     .main-block_operation
@@ -450,10 +459,9 @@ header
       justify-content: center;
       h2 
       {
-        text-align: center;
+        text-align: start;
         padding-top: 2%;
         padding-left: 0%;
-        padding-right: 60%;
       }
     }  
     .main-block_restaurant
@@ -478,7 +486,6 @@ header
     {
       padding-top: 20px;
       padding-left: 50px;
-      padding-right: 60%;
     }
   }  
   .main-block_operation
@@ -493,7 +500,6 @@ header
       text-align: center;
       padding-top: 2%;
       padding-left: 3%;
-      padding-right: 60%;
     }
   }  
   .main-block_restaurant
@@ -512,12 +518,7 @@ header
 @media screen and (max-width: 768px) {
 
 
-body 
-{
-      display: flex; 
-      justify-content: center;
-      flex-direction: column;
-}
+
 main img 
 {
   width: 40%;
@@ -526,13 +527,11 @@ main img
 }
 
 
-
 /* header / main / footer */
 
 header
 {
     justify-content: center;
-    text-align: center;
     height: 370px;
     #logo_ohmyfood 
     {
@@ -540,11 +539,8 @@ header
      }
      #map
      {
-       display: flex;
-       justify-content: center;
        i 
        {
-         margin-right: 10px;
          padding-left: 0px;
        }
        p {
@@ -558,7 +554,6 @@ header
       }
       p 
       {
-        font-size: 1em;
         padding-left: 0px;
       }
       .purple_button 
@@ -580,8 +575,7 @@ header
 
 .main-block1
 {
-  width: 90%;
-  display: flex;
+  width: auto;
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
@@ -596,12 +590,9 @@ header
       .main-block_operation
       {
       width: 70%;
-      display: flex;
-      align-items: center;
-      position: relative;
       border: 5px solid #F7F7F7;
       margin-left: 8%;
-      margin-right: 10%;
+      margin-right: 0%;
       p 
       {
         position: absolute;
@@ -631,7 +622,6 @@ header
     height: 260px;
     border: 2px solid white;
     background-color: white;
-    border-radius: 30px;
     margin-left: 8%;
     h3
     {
@@ -652,8 +642,6 @@ header
 
 footer 
 {
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
    border: 30px solid #353535;
    background-color: #353535;
@@ -664,21 +652,7 @@ footer
    }
    img 
    {
-    width: 170px;
    padding: 20px 0px 0px 0px;
-   object-fit: cover;
-   }
-   h4 
-   {
-   font-size: 1em;
-   color: white;
-   margin-left: 15px;
-   }
-   h5 
-   {
-   font-size: 1em;
-   color: white;
-   margin-left: 0px;
    }
    h6 
    {
@@ -689,15 +663,13 @@ footer
    
 }
 }
+
 @media screen and (max-width: 500px) {
 
 
   body 
 {
-      width: auto;
-      display: flex; 
       justify-content: flex-start;
-      flex-direction: column;
 }
 header
 {
@@ -730,12 +702,14 @@ main
   margin-left: 0%;
   margin-right: 0%;
   background-color: white;
+
 }
 .main-block_restaurant
 {
   border: 1px solid #F7F7F7;
   background-color: #F7F7F7;
   margin-left: 2%;
+  margin-right: 0px;
   &:hover 
   {
     border-color: white;
