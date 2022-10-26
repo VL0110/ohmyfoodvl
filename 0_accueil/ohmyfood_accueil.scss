@@ -290,6 +290,7 @@ header
   height: 50%;
   background-color: white;
   margin-bottom: 80px;
+  padding-bottom: 20px;
   h2 
   {
     padding-top: 2%;
@@ -312,7 +313,7 @@ header
     border-radius: 30px;
     margin-left: 30px;
     margin-right: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     box-shadow: $shadow;
     transform: scale(1);
     transition: all 400ms;
@@ -520,6 +521,44 @@ header
 @media screen and (max-width: 768px) {
 
 
+  .spinner 
+  {
+    display: flex;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: relative;
+    position: fixed;
+    animation: spinner 2s ease-out;
+    visibility: hidden;
+    z-index: 999;
+    .spinner_border
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 10px solid transparent;
+      border-top: 10px solid $tertiary;
+      border-bottom: 10px solid $secondary;
+      border-radius: 50%;
+      position: absolute;
+      top: 30%; 
+      left: 40%;
+      width: 120px;
+      height: 120px;
+       animation: spinner_border 2s ease-out;
+       img 
+       {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        text-align: center;
+       }
+    }
+  }
 
 main img 
 {
@@ -609,10 +648,11 @@ header
  .main-block2
 {
   width: 90%;
-  height: 1270px;
+  height: 1350px;
   flex-direction: column;
   background-color: #F7F7F7;
   margin-left: 5%;
+  flex-wrap: nowrap;
   h2 
   {
     padding-top: 0%;
@@ -683,10 +723,7 @@ footer
 @media screen and (max-width: 500px) {
 
 
-  body 
-{
-      justify-content: flex-start;
-}
+
 header
 {
      width: auto;
@@ -697,7 +734,7 @@ header
   } 
   h1 
   {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
   p 
   {
@@ -707,29 +744,13 @@ header
 main
 {
       width: auto;
+      justify-content: center;
 }
-.main-block1
-{
-  margin-left: 0%;
-  margin-right: 0%;
-} 
-.main-block2
-{
-  margin-left: 0%;
-  margin-right: 0%;
-  background-color: white;
 
-}
 .main-block_restaurant
 {
-  border: 1px solid #F7F7F7;
-  background-color: #F7F7F7;
-  margin-left: 2%;
-  margin-right: 0px;
   &:hover 
   {
-    border-color: white;
-    background-color: white;
     .new 
     {
       transform: scale(1);

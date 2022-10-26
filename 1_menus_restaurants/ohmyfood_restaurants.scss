@@ -60,6 +60,10 @@ a
   flex-direction: column;
   text-align: start;
   margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 60px;
+  z-index: 1;
 }
 
 @mixin main-grid
@@ -281,15 +285,14 @@ p
 h4 
 {
   margin-top: 20px;
-  padding-top: 0%;
+  margin-left: 20px;
+  margin-right: 5px;
   color: black;
   position: absolute;
-  left: 90%;
+  left: 92%;
+  z-index: 2;
 }
-h6 
-{
-  display: none;
-}
+
 .check_circle
 {
   position: absolute;
@@ -349,7 +352,7 @@ h2
     h4 
     {
     position: absolute;
-    left: 90%;
+    left: 88%;
     }
     i 
     {
@@ -553,7 +556,7 @@ a
     h4 
     {
     position: absolute;
-    left: 85%;
+    left: 83%;
     }
   }
   }
@@ -566,7 +569,7 @@ a
     h4 
     {
     position: absolute;
-    left: 85%;
+    left: 83%;
     }
   }
   }
@@ -579,7 +582,7 @@ a
     h4 
     {
     position: absolute;
-    left: 85%;
+    left: 83%;
     }
   }
   }
@@ -607,6 +610,15 @@ a
       text-align:start;
     }
   }
+
+  main 
+  {
+  h4 
+  {
+  position: absolute;
+  left: 90%;
+  }
+  }
   .main-starter_choice
   {
   position: relative;
@@ -616,7 +628,7 @@ a
     h4 
     {
     position: absolute;
-    left: 80%;
+    left: 75%;
     }
   }
   }
@@ -629,7 +641,7 @@ a
     h4 
     {
     position: absolute;
-    left: 80%;
+    left: 75%;
     }
   }
   }
@@ -642,7 +654,7 @@ a
     h4 
     {
     position: absolute;
-    left: 80%;
+    left: 75%;
     }
   }
   }
@@ -746,7 +758,7 @@ p
 h4 
 {
   position: absolute;
-  left: 90%;
+  left: 85%;
 }
 .check_circle
 {
@@ -769,7 +781,7 @@ font-size: 1.6em;
       h4 
       {
       position: absolute;
-      left: 75%;
+      left: 70%;
       }
     } 
     } 
@@ -788,7 +800,7 @@ font-size: 1.6em;
       h4 
       {
       position: absolute;
-      left: 75%;
+      left: 70%;
       }
     } 
     } 
@@ -806,7 +818,7 @@ font-size: 1.6em;
       h4 
       {
       position: absolute;
-      left: 75%;
+      left: 70%;
       }
     }
     } 
@@ -849,7 +861,6 @@ footer
 body 
 {
   width: auto;
-    justify-content: flex-start;
 }
 header
 {
@@ -870,134 +881,89 @@ header
   padding-left: 0%;
 }
 }
+
+main 
+{
+h4 
+{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 5px;
+  position: absolute;
+  left: 80%;
+}
+}
 .main-starter
 {
-  margin-left: 5%;
+.main-starter_choice
+{
+position: relative;
+&:hover 
+{
+  border-color: #F5EDFF;
+  h4 
+  {
+  position: absolute;
+  left: 65%;
+  margin-left: 20px;
+  margin-right: 5px;
+  }
+  .main-starter_text
+  {
+  padding-right: 120px;
+  }
+}
+}
 }
 .main-dish
 {
-  margin-left: 5%;
+.main-dish_choice
+{
+position: relative;
+&:hover 
+{
+  border-color: #F5EDFF;
+  h4 
+  {
+  position: absolute;
+  left: 65%;
+  }
+  .main-dish_text
+  {
+    padding-right: 120px;
+  }
+}
+}
 }
 .main-dessert
 {
-  margin-left: 5%;
+.main-dessert_choice
+{
+position: relative;
+&:hover 
+{
+  border-color: #F5EDFF;
+  h4 
+  {
+  position: absolute;
+  left: 65%;
+  }
+  .main-dessert_text
+  {
+    padding-right: 120px;
+  }
+}
+}
 }
 footer 
 {
  padding-left: 5px;
 }
-
 }
 
 @media screen and (max-width: 500px) {
-
-  #title_restaurant
+  header
   {
-    i
-    {
-      position: absolute;
-      right: 10%;
-    }
-  }
-  main 
-  {
-h4 
-{
-  display: none;
-}
-h6 
-{
-  font-size: 1em;
- display: block;
- position: absolute;
- left: 2%;
- top: 50%;
-}
-.check_circle
-{
-  height: 78px;
-  border: 20px solid transparent;
-  background-color: transparent;
-  padding: 80px 5px 12px 5px;      
-  }
-  i 
-  {
-    color:$tertiary;
-    background-color: transparent;
-    padding-top: 100%;
-  }
-}
-
-  .main-starter_choice
-  {
-    position: relative;
-    flex-direction: column;
-    height: 130px;
-    &:hover 
-    {
-      border-color: #F5EDFF;
-      background-color: #F5EDFF;
-    h4 
-    {
-      position: absolute;
-      left: 0%;
-    }
-}
-}
-.main-starter_text
-{
-position: absolute;
-top: 5%;
-}
-
-  .main-dish_choice
-  {
-    position: relative;
-    flex-direction: column;
-    height: 130px;
-    &:hover 
-    {
-      border-color: #F5EDFF;
-      background-color: #F5EDFF;
-    h4 
-    {
-      position: absolute;
-      left: 0%;
-    }
-  } 
-  .main-dish_text
-  {
-  position: absolute;
-  top: 5%;
-  }
-}
-  .main-dessert_choice
-  {
-    position: relative;
-    flex-direction: column;
-    height: 130px;
-    &:hover 
-    {
-      border-color: #F5EDFF;
-      background-color: #F5EDFF;
-    h4 
-    {
-      position: absolute;
-      left: 0%;
-    }
-  } 
-  .main-dessert_text
-  {
-  position: absolute;
-  top: 5%;
-  }
-}
-
-}
-
-
-@media screen and (max-width: 470px) {
-
   #title_restaurant
   {
     i
@@ -1006,6 +972,7 @@ top: 5%;
     }
   }
 }
+}
 
 @media screen and (max-width: 450px) {
   header
@@ -1013,6 +980,79 @@ top: 5%;
   #title_restaurant
   {
     width: 90%;
+    i
+    {
+     display: none;
+    }
+  }
+}
+main 
+{
+h4 
+{
+  position: absolute;
+  left: 75%;
+}
+}
+.main-starter
+{
+.main-starter_choice
+{
+position: relative;
+&:hover 
+{
+  border-color: #F5EDFF;
+  h4 
+  {
+  position: absolute;
+  left: 60%;
+  }
+  .main-starter_text
+  {
+  padding-right: 120px;
   }
 }
 }
+}
+.main-dish
+{
+.main-dish_choice
+{
+position: relative;
+&:hover 
+{
+  border-color: #F5EDFF;
+  h4 
+  {
+  position: absolute;
+  left: 60%;
+  }
+  .main-dish_text
+  {
+    padding-right: 120px;
+  }
+}
+}
+}
+.main-dessert
+{
+.main-dessert_choice
+{
+position: relative;
+&:hover 
+{
+  border-color: #F5EDFF;
+  h4 
+  {
+  position: absolute;
+  left: 60%;
+  }
+  .main-dessert_text
+  {
+    padding-right: 120px;
+  }
+}
+}
+}
+}
+

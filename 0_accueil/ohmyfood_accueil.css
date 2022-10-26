@@ -298,6 +298,7 @@ header .purple_button:hover {
   height: 50%;
   background-color: white;
   margin-bottom: 80px;
+  padding-bottom: 20px;
 }
 .main-block2 h2 {
   padding-top: 2%;
@@ -319,7 +320,7 @@ header .purple_button:hover {
   border-radius: 30px;
   margin-left: 30px;
   margin-right: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   box-shadow: 2px 5px 5px #e0dede;
   transform: scale(1);
   transition: all 400ms;
@@ -492,6 +493,44 @@ footer h6 {
 /*Version mobile -768px */
 /* color / body / img / text */
 @media screen and (max-width: 768px) {
+  .spinner {
+    display: flex;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: relative;
+    position: fixed;
+    -webkit-animation: spinner 2s ease-out;
+            animation: spinner 2s ease-out;
+    visibility: hidden;
+    z-index: 999;
+  }
+  .spinner .spinner_border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid transparent;
+    border-top: 10px solid #99E2D0;
+    border-bottom: 10px solid #FF79DA;
+    border-radius: 50%;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spinner_border 2s ease-out;
+            animation: spinner_border 2s ease-out;
+  }
+  .spinner .spinner_border img {
+    width: 70px;
+    height: 70px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    text-align: center;
+  }
   main img {
     width: 40%;
     height: 90%;
@@ -557,10 +596,11 @@ footer h6 {
   }
   .main-block2 {
     width: 90%;
-    height: 1270px;
+    height: 1350px;
     flex-direction: column;
     background-color: #F7F7F7;
     margin-left: 5%;
+    flex-wrap: nowrap;
   }
   .main-block2 h2 {
     padding-top: 0%;
@@ -608,9 +648,6 @@ footer h6 {
   }
 }
 @media screen and (max-width: 500px) {
-  body {
-    justify-content: flex-start;
-  }
   header {
     width: auto;
     height: 400px;
@@ -619,32 +656,14 @@ footer h6 {
     height: 10%;
   }
   header h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
   header p {
     font-size: 1em;
   }
   main {
     width: auto;
-  }
-  .main-block1 {
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  .main-block2 {
-    margin-left: 0%;
-    margin-right: 0%;
-    background-color: white;
-  }
-  .main-block_restaurant {
-    border: 1px solid #F7F7F7;
-    background-color: #F7F7F7;
-    margin-left: 2%;
-    margin-right: 0px;
-  }
-  .main-block_restaurant:hover {
-    border-color: white;
-    background-color: white;
+    justify-content: center;
   }
   .main-block_restaurant:hover .new {
     transform: scale(1);
