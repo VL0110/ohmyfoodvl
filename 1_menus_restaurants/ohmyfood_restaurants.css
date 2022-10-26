@@ -281,12 +281,12 @@ main i {
   }
 }
 .main-starter {
+  display: grid;
+  grid-gap: 7px;
   width: auto;
   text-align: center;
-  flex-wrap: wrap;
   background-color: #F6F6F6;
   margin-left: 10%;
-  padding-bottom: 3%;
 }
 
 h2 {
@@ -342,12 +342,12 @@ h2 .main-starter_underline {
 }
 
 .main-dish {
+  display: grid;
+  grid-gap: 7px;
   width: auto;
   text-align: center;
   background-color: #F6F6F6;
   margin-left: 10%;
-  flex-wrap: wrap;
-  padding-bottom: 3%;
 }
 
 h2 {
@@ -403,9 +403,10 @@ h2 .main-dish_underline {
 }
 
 .main-dessert {
+  display: grid;
+  grid-gap: 7px;
   width: auto;
   text-align: center;
-  flex-wrap: wrap;
   background-color: #F6F6F6;
   margin-left: 10%;
 }

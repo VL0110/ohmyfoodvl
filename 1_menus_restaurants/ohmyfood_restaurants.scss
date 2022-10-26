@@ -61,6 +61,25 @@ a
   text-align: start;
   margin-left: 10px;
 }
+
+@mixin main-grid
+{
+  display: grid;
+  grid-gap: 7px;
+  width: auto;
+  text-align: center;
+  background-color: #F6F6F6;
+  margin-left: 10%;
+}
+
+@mixin main-underline
+{
+  display: block;
+  max-width: 40px;
+  height: 2.5px;
+  margin-top: 5px;
+  background-color: $tertiary;
+}
   
     /* Loader Menus  */
 
@@ -304,12 +323,7 @@ h6
 
 .main-starter
 {
-width: auto;
-text-align: center;
-flex-wrap: wrap;
-background-color: #F6F6F6;
-margin-left: 10%;
-padding-bottom: 3%;
+  @include main-grid;
 }
 h2 
 {
@@ -319,11 +333,7 @@ h2
   font-weight: lighter;
   .main-starter_underline
 {
-  display: block;
-  max-width: 40px;
-  height: 2.5px;
-  margin-top: 5px;
-  background-color: $tertiary;
+  @include main-underline;
 }
 }
   .main-starter_choice
@@ -361,12 +371,7 @@ h2
 
 .main-dish
 {
-width: auto;
-text-align: center;
-background-color: #F6F6F6;
-margin-left: 10%;
-flex-wrap: wrap;
-padding-bottom: 3%;
+  @include main-grid;
 } 
 h2 
 {
@@ -376,11 +381,7 @@ h2
   font-weight: lighter;
   .main-dish_underline
 {
-  display: block;
-  max-width: 40px;
-  height: 2.5px;
-  margin-top: 5px;
-  background-color: $tertiary;
+  @include main-underline;
 }
 }
   .main-dish_choice
@@ -418,11 +419,7 @@ h2
 
 .main-dessert
 {
-width: auto;
-text-align: center;
-flex-wrap: wrap;
-background-color: #F6F6F6;
-margin-left: 10%;
+  @include main-grid;
 } 
 h2 
 {
@@ -432,11 +429,7 @@ h2
   font-weight: lighter;
   .main-dessert_underline
 {
-  display: block;
-  max-width: 40px;
-  height: 2.5px;
-  margin-top: 5px;
-  background-color: $tertiary;
+  @include main-underline;
 }
 }
   .main-dessert_choice
@@ -506,11 +499,11 @@ footer
   display: flex;
   flex-direction: column;
   align-items: center;
-width: auto;
-height: 280px;
-text-align: start;
-border: 30px solid #353535;
-background-color: #353535;
+  width: auto;
+  height: 280px;
+  text-align: start;
+  border: 30px solid #353535;
+  background-color: #353535;
 .footer_block
 {
 display: flex;
@@ -1001,6 +994,7 @@ top: 5%;
 }
 
 }
+
 
 @media screen and (max-width: 470px) {
 
