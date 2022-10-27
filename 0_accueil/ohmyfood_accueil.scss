@@ -223,7 +223,6 @@ header
       .main-block_operation
       {
       width: 80%;
-      min-width: 300px;
       display: flex;
       justify-content: flex-start;
       align-items:center;
@@ -424,18 +423,30 @@ header
      font-size: 1em;
      color: white;
      margin-left: 15px;
+     &:hover 
+     {
+      color: $tertiary;
+     }
      }
      h5 
      {
      font-size: 1em;
      color: white;
      margin-left: 0px;
+     &:hover 
+     {
+      color: $tertiary;
+     }
      }
      h6 
      {
       font-size: 1em;
       color: white;
       margin-top: -5px;
+      &:hover 
+      {
+       color: $tertiary;
+      }
      }
   }
   @media screen and (max-width: 1350px) {
@@ -778,3 +789,4 @@ footer
   }
   }
 }
+

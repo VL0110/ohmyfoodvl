@@ -134,7 +134,7 @@ header #logo_ohmyfood {
 }
 header #logo_ohmyfood img {
   width: 300px;
-  height: 50px;
+  height: 52px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -388,7 +388,7 @@ h2 .main-dish_underline {
 }
 .main-dish_choice:hover h4 {
   position: absolute;
-  left: 90%;
+  left: 88%;
 }
 .main-dish_choice:hover i {
   display: block;
@@ -453,7 +453,7 @@ h2 .main-dessert_underline {
 }
 .main-dessert_choice:hover h4 {
   position: absolute;
-  left: 90%;
+  left: 88%;
 }
 .main-dessert_choice:hover i {
   display: block;
@@ -528,15 +528,24 @@ footer h4 {
   margin-left: 15px;
   padding-top: 10px;
 }
+footer h4:hover {
+  color: #99E2D0;
+}
 footer h5 {
   font-size: 1em;
   color: white;
   margin-left: 0px;
 }
+footer h5:hover {
+  color: #99E2D0;
+}
 footer h6 {
   font-size: 1em;
   color: white;
   margin-top: -5px;
+}
+footer h6:hover {
+  color: #99E2D0;
 }
 footer a {
   text-decoration: none;
@@ -783,7 +792,7 @@ footer a {
   }
   header #logo_ohmyfood img {
     width: 220px;
-    height: 35px;
+    height: 38px;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -851,13 +860,26 @@ footer a {
 @media screen and (max-width: 450px) {
   header #title_restaurant {
     width: 90%;
-  }
-  header #title_restaurant i {
-    display: none;
+    padding-left: 0%;
   }
   main h4 {
     position: absolute;
     left: 75%;
+    font-size: 0.9em;
+  }
+  main h3 {
+    font-size: 1em;
+  }
+  main p {
+    font-size: 0.9em;
+  }
+  main .check_circle {
+    border: 15px solid #99E2D0;
+    padding: 16px 0px 18px 0px;
+  }
+  .main-starter {
+    padding-top: 15%;
+    margin-left: 5%;
   }
   .main-starter .main-starter_choice {
     position: relative;
@@ -870,7 +892,10 @@ footer a {
     left: 60%;
   }
   .main-starter .main-starter_choice:hover .main-starter_text {
-    padding-right: 120px;
+    padding-right: 90px;
+  }
+  .main-dish {
+    margin-left: 5%;
   }
   .main-dish .main-dish_choice {
     position: relative;
@@ -883,7 +908,10 @@ footer a {
     left: 60%;
   }
   .main-dish .main-dish_choice:hover .main-dish_text {
-    padding-right: 120px;
+    padding-right: 80px;
+  }
+  .main-dessert {
+    margin-left: 5%;
   }
   .main-dessert .main-dessert_choice {
     position: relative;
@@ -896,6 +924,6 @@ footer a {
     left: 60%;
   }
   .main-dessert .main-dessert_choice:hover .main-dessert_text {
-    padding-right: 120px;
+    padding-right: 90px;
   }
 }/*# sourceMappingURL=ohmyfood_restaurants.css.map */

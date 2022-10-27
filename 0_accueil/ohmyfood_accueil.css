@@ -225,7 +225,6 @@ header .purple_button:hover {
 
 .main-block_operation {
   width: 80%;
-  min-width: 300px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -421,15 +420,24 @@ footer h4 {
   color: white;
   margin-left: 15px;
 }
+footer h4:hover {
+  color: #99E2D0;
+}
 footer h5 {
   font-size: 1em;
   color: white;
   margin-left: 0px;
 }
+footer h5:hover {
+  color: #99E2D0;
+}
 footer h6 {
   font-size: 1em;
   color: white;
   margin-top: -5px;
+}
+footer h6:hover {
+  color: #99E2D0;
 }
 
 @media screen and (max-width: 1350px) {
