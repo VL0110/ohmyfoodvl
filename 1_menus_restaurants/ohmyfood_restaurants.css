@@ -531,6 +531,9 @@ footer h4 {
 footer h4:hover {
   color: #99E2D0;
 }
+footer i {
+  color: white;
+}
 footer h5 {
   font-size: 1em;
   color: white;
