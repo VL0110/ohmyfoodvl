@@ -218,9 +218,10 @@ header .purple_button:hover {
 }
 .main-block1 h2 {
   padding-top: 2%;
-  padding-left: 0%;
-  padding-bottom: 1%;
-  margin-right: 75%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  margin-right: 70%;
+  font-size: 1.8em;
 }
 
 .main-block_operation {
@@ -303,9 +304,10 @@ header .purple_button:hover {
 }
 .main-block2 h2 {
   padding-top: 2%;
-  padding-left: 0%;
-  padding-bottom: 1%;
-  margin-right: 75%;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  margin-right: 70%;
+  font-size: 1.8em;
 }
 
 .main-block_restaurant {
@@ -454,6 +456,8 @@ footer h6:hover {
     padding-top: 20px;
     padding-left: 50px;
     margin-right: 60%;
+    font-size: 1.5em;
+    padding-bottom: 1%;
   }
   .main-block_operation {
     width: 90%;
@@ -467,6 +471,8 @@ footer h6:hover {
     padding-top: 2%;
     padding-left: 0%;
     margin-right: 60%;
+    font-size: 1.5em;
+    padding-bottom: 1%;
   }
   .main-block_restaurant {
     width: 400px;

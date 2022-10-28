@@ -1089,3 +1089,14 @@ position: relative;
 }
 }
 
+@media screen and (max-width: 400px) {
+
+  header
+  {
+  #title_restaurant
+  {
+    width: 88%;
+    padding-left: 0%;
+  }
+  }
+}

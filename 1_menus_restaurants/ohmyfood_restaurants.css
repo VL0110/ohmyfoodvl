@@ -929,4 +929,10 @@ footer a {
   .main-dessert .main-dessert_choice:hover .main-dessert_text {
     padding-right: 90px;
   }
+}
+@media screen and (max-width: 400px) {
+  header #title_restaurant {
+    width: 88%;
+    padding-left: 0%;
+  }
 }/*# sourceMappingURL=ohmyfood_restaurants.css.map */
