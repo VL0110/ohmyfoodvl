@@ -149,6 +149,444 @@ a
       animation: slideDown 2.3s;
     }
 
+/*Version mobile -768px */
+
+
+  /*Mixins Desktop*/
+
+  @mixin main-choice 
+  {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    text-decoration: none;
+    border: 5px solid white;
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 3%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: $shadow;
+  }
+
+  /* header / main / footer */
+
+  /* header */
+
+  header
+  {
+    width: auto;
+    position: relative;
+    height: 575px;
+    justify-content: center;
+    background-color: #F6F6F6;
+    #logo_ohmyfood 
+    {
+      width: auto;
+      height: 8%;
+      align-items: center;
+      border: 20px solid white;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0px 4px 4px #b3b2b2;
+      img
+      {
+        width: 300px;
+        height: 52px;
+        object-fit: cover;
+      }
+      i 
+      {
+        color: #353535;
+        font-size: 1.4em;
+        padding-right: 20px;
+        padding-left: 0px;
+        padding-top: 0px;
+        position: absolute;
+        left: 20px;
+        top: 30px;
+      }
+    }
+  }
+    #img_restaurant
+    {
+      margin-top: 1px;
+      background-color: #F6F6F6;
+      img 
+      {
+        width: 100%;
+        height: 420px;
+        margin-left: 0%;
+        object-fit: cover;
+        border-radius: 0px;
+        opacity: 1;
+        box-shadow: 0px 0px 0px 0px #d1d1d1;
+      }
+    }
+     
+    #title_restaurant
+    {
+      width: 94.5%;
+      display: flex;
+      justify-content: flex-start;
+      border: 20px solid #F6F6F6;
+      background-color: #F6F6F6;
+      border-top-left-radius: 45px;
+      border-top-right-radius: 45px;
+      position: absolute;
+      top: 450px;
+      h1
+      {
+        font-size: 2em;
+        text-align:start;
+        padding-left: 12%;
+      }
+    }
+  
+
+/* heart */
+
+.restaurant-heart-empty
+{
+  font-size: 2em;
+  position: absolute;
+  top: 30%;
+  right: 15%;
+  color: #353535;
+  opacity: 0.9;
+}
+.restaurant-heart-filled
+  {
+    font-size: 2em;
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    background: linear-gradient(170deg, #FF79DA 5%, #9356DC 80%);
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transition: all 600ms ease-in-out ;
+    transform: scale(0);
+  }
+  .menu_heart:hover .restaurant-heart-filled
+  {
+    opacity: 1;
+    transform: scale(1);
+  }
+ 
+  /* main */
+
+main 
+{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #F6F6F6;
+  padding-top: 0px;
+  h3
+{
+    color: black;
+    margin-bottom: 0%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+p 
+{
+  color: black;
+  margin-top: 2% ;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+h4 
+{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 5px;
+  color: black;
+  position: absolute;
+  left: 85%;
+  z-index: 2;
+}
+.check_circle
+{
+  position: absolute;
+  right: -85px;
+  display: none;
+  border: 20px solid $tertiary;
+  background-color: $tertiary;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+padding: 10px 0px 14px 0px;    
+opacity: 0.9;    
+}
+i 
+{
+font-size: 1.6em;
+display: none;
+color:white;
+background-color: $tertiary;
+transform: rotate(180deg);
+animation: rotate 0.5s both;
+}
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0);
+}
+100% {
+      transform: rotate(360deg);
+  }
+}
+main
+{
+.main-starter
+{
+  @include main-grid;
+}
+h2 
+{
+  font-size: 1em;
+  text-align: start;
+  padding-left: 5%;
+  font-weight: lighter;
+  .main-starter_underline
+  {
+    @include main-underline;
+  }
+} 
+    .main-starter_choice
+    {
+    @include main-choice;
+    width: 80%;
+    height: 83px;
+    position: relative;
+    &:hover 
+    {
+      border-color: #F5EDFF;
+      background-color: #F5EDFF;
+      box-shadow: $shadowhover;
+      h4 
+      {
+      position: absolute;
+      left: 70%;
+    }
+    i 
+    {
+      display: block;
+    }
+    .check_circle
+    {
+      position: absolute;
+      right: -5px;
+      display: block;
+    }
+  }
+  .main-starter_text
+  {
+  @include flex-text;
+  }
+  } 
+   
+  .main-dish
+  {
+    @include main-grid;
+  }
+  h2 
+  {
+    font-size: 1em;
+    text-align: start;
+    padding-left: 5%;
+    font-weight: lighter;
+    .main-dish_underline
+    {
+      @include main-underline;
+    }
+  } 
+      .main-dish_choice
+      {
+      @include main-choice;
+      width: 80%;
+      height: 83px;
+      &:hover 
+      {
+        border-color: #F5EDFF;
+        background-color: #F5EDFF;
+        box-shadow: $shadowhover;
+        h4 
+        {
+        position: absolute;
+        left: 70%;
+      }
+      i 
+      {
+        display: block;
+      }
+      .check_circle
+      {
+        position: absolute;
+        right: -5px;
+        display: block;
+      }
+    }
+    .main-dish_text
+    {
+    @include flex-text;
+    }
+    } 
+
+    .main-dessert
+    {
+      @include main-grid;
+    }
+    h2 
+    {
+      font-size: 1em;
+      text-align: start;
+      padding-left: 5%;
+      font-weight: lighter;
+      .main-dessert_underline
+      {
+        @include main-underline;
+      }
+    } 
+        .main-dessert_choice
+        {
+        @include main-choice;
+        width: 80%;
+        height: 83px;
+        &:hover 
+        {
+          border-color: #F5EDFF;
+          background-color: #F5EDFF;
+          box-shadow: $shadowhover;
+          h4 
+          {
+          position: absolute;
+          left: 70%;
+        }
+        i 
+        {
+          display: block;
+        }
+        .check_circle
+        {
+          position: absolute;
+          right: -5px;
+          display: block;
+        }
+      }
+      .main-dessert_text
+      {
+      @include flex-text;
+      }
+      } 
+
+.button 
+{
+width: 90%;
+margin-left: 0%;
+text-align: center;
+height: 160px;
+padding-top: 50px;
+}
+.purple_button 
+{
+text-align: center;
+color: white;
+border: 0px solid ;
+border-radius: 30px;
+height: 30%;
+width: 30%;
+background: $degrade;
+padding: 20px 70px 20px 70px ;
+box-shadow: $softshadow;
+transform: scale(1);
+transition: all 400ms;
+opacity: 1;
+&:hover
+{
+ transform: scale(1.15);
+ box-shadow: $shadowhover;
+ opacity: 0.8;
+}
+}
+} 
+
+/* footer */
+
+footer 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+   padding-left: 50px;
+   width: auto;
+   height: 280px;
+   text-align: start;
+   border: 30px solid #353535;
+   background-color: #353535;
+   .footer_block
+{
+display: flex;
+align-items: center;
+margin-left: 0px;
+margin-bottom: -15px;
+}
+   img 
+   {
+    width: 170px;
+   padding: 20px 0px 0px 0px;
+   object-fit: cover;
+   }
+   h4 
+{
+font-size: 1em;
+color: white;
+margin-left: 15px;
+padding-top: 10px;
+&:hover 
+{
+ color: $tertiary;
+}
+}
+i 
+{
+  color: white;
+}
+h5 
+{
+font-size: 1em;
+color: white;
+margin-left: 0px;
+&:hover 
+{
+ color: $tertiary;
+}
+}
+   h6 
+   {
+    font-size: 1em;
+    color: white;
+    margin-top: 0px;
+    &:hover 
+    {
+     color: $tertiary;
+    }
+   }
+   a
+{
+  text-decoration: none;
+}
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1650px) {
+
 /* header */
 
 
@@ -208,10 +646,9 @@ header
 }
 #title_restaurant
 {
-  width: auto;
+  width: 90%;
   display: flex;
   justify-content: center;
-  position: relative;
   border: 15px solid #F6F6F6;
   background-color: #F6F6F6;
   border-top-left-radius: 0px;
@@ -324,6 +761,8 @@ h4
   }
 }
 
+main
+{
 .main-starter
 {
   @include main-grid;
@@ -494,7 +933,7 @@ opacity: 1;
 }
 }
 } 
-
+}
 /* footer */
 
 footer 
@@ -560,6 +999,7 @@ a
   text-decoration: none;
 }
 }
+}
 
 @media screen and (max-width: 1350px) {
 
@@ -611,18 +1051,19 @@ a
 
   #title_restaurant
   {
-    width: auto;
+    width: 96%;
     display: flex;
     justify-content: flex-start;
-    position: relative;
-    border: 15px solid #F6F6F6;
+    border: 20px solid #F6F6F6;
     background-color: #F6F6F6;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    padding-left: 10%;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    position: absolute;
+    top: 450px;
     h1
     {
-      font-size: 3em;
+      font-size: 2em;
+      margin-left: 10%;
       text-align:start;
     }
   }
@@ -677,191 +1118,7 @@ a
 
 }
 
-/*Version mobile -768px */
 
-@media screen and (max-width: 768px) {
-
-  /*Mixins Desktop*/
-
-  @mixin main-choice 
-  {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    position: relative;
-    border: 5px solid white;
-    background-color: white;
-    margin-left: 2%;
-    margin-right: 3%;
-  }
-
-  /* header / main / footer */
-
-  header
-  {
-    position: relative;
-    height: 575px;
-    #logo_ohmyfood 
-    {
-      border: 20px solid white;
-      background-color: white;
-      i 
-      {
-        position: absolute;
-        left: 20px;
-        top: 30px;
-      }
-    }
-    #img_restaurant
-    {
-      margin-top: 1px;
-      img 
-      {
-        width: 100%;
-        height: 420px;
-        margin-left: 0%;
-        border-radius: 0px;
-        opacity: 1;
-        box-shadow: 0px 0px 0px 0px #d1d1d1;
-      }
-    }
-    }  
-    #title_restaurant
-    {
-      width: 94.5%;
-      justify-content: flex-start;
-      border: 20px solid #F6F6F6;
-      border-top-left-radius: 45px;
-      border-top-right-radius: 45px;
-      position: absolute;
-      top: 450px;
-      h1
-      {
-        font-size: 2em;
-        margin-left: 10%;
-      }
-    }
-  
-
-/* heart */
-
-.restaurant-heart-empty
-{
-  font-size: 2em;
-  position: absolute;
-  top: 30%;
-  right: 15%;
-}
-.restaurant-heart-filled
-  {
-    font-size: 2em;
-    position: absolute;
-    top: 30%;
-    right: 15%;
-  }
-
-main 
-{
-h2 
-{
-  text-align: start;
-  padding-left: 5%;
-}
-p 
-{
-  margin-top: 2% ;
-}
-h4 
-{
-  position: absolute;
-  left: 85%;
-}
-.check_circle
-{
-padding: 10px 0px 14px 0px;       
-}
-i 
-{
-font-size: 1.6em;
-}
-}
-.main-starter
-{
-    .main-starter_choice
-    {
-    @include main-choice;
-    &:hover 
-    {
-      border-color: #F5EDFF;
-      background-color: #F5EDFF;
-      h4 
-      {
-      position: absolute;
-      left: 70%;
-      }
-    } 
-    } 
-  } 
-
-
-.main-dish
-{
-    .main-dish_choice
-    {
-    @include main-choice;
-    &:hover 
-    {
-      border-color: #F5EDFF;
-      background-color: #F5EDFF;
-      h4 
-      {
-      position: absolute;
-      left: 70%;
-      }
-    } 
-    } 
-}
-
-.main-dessert
-{
-    .main-dessert_choice
-    {
-    @include main-choice;
-    &:hover 
-    {
-      border-color: #F5EDFF;
-      background-color: #F5EDFF;
-      h4 
-      {
-      position: absolute;
-      left: 70%;
-      }
-    }
-    } 
-} 
-.button 
-{
-width: 90%;
-margin-left: 0%;
-}
-
-
-footer 
-{
-  align-items: flex-start;
-   padding-left: 50px;
-   img 
-   {
-   padding: 20px 0px 0px 0px;
-   }
-   h6 
-   {
-    font-size: 1em;
-    color: white;
-    margin-top: 0px;
-   }
-}
-}
 @media screen and (max-width: 650px) {
   header
   {
