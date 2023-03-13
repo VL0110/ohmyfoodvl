@@ -1,4 +1,4 @@
-# Site_html_css_sass_VL
+# ohmyfoodvl
 site ohmyfood projet 3 Openclassrooms 
 - Mettre en place son environnement Front-End
 - Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
